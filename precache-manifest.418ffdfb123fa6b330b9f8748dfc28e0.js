@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "510fba9d79e62afaff82",
+    "revision": "21eb190fe0da8a299aae",
     "url": "/bandpage-mrkatband.com/static/css/main.bc2a5968.chunk.css"
   },
   {
-    "revision": "510fba9d79e62afaff82",
-    "url": "/bandpage-mrkatband.com/static/js/main.11b3df44.chunk.js"
+    "revision": "21eb190fe0da8a299aae",
+    "url": "/bandpage-mrkatband.com/static/js/main.0496923c.chunk.js"
   },
   {
     "revision": "5c79c5beb375bb115cc4",
@@ -272,7 +272,7 @@ self.__precacheManifest = [
     "url": "/bandpage-mrkatband.com/static/media/blog-post.3.8d6e276b.md"
   },
   {
-    "revision": "d023a590ca2ff1bfc7579810994c1c58",
+    "revision": "27325ee1619b42eb67e87c78d41aa290",
     "url": "/bandpage-mrkatband.com/index.html"
   }
 ];

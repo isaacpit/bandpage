@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/bandpage-mrkatband.com/precache-manifest.6a76baf46d8fed41c47ea62bddd9c84c.js"
+  "/bandpage-mrkatband.com/precache-manifest.418ffdfb123fa6b330b9f8748dfc28e0.js"
 );
 
 workbox.clientsClaim();
