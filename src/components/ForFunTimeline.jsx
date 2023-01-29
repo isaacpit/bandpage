@@ -1,6 +1,22 @@
 import React, { Component } from 'react';
 import Constants from './constants/constant';
 import './ForFunTimeline.css';
+import { makeStyles } from '@material-ui/core/styles';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import Typography from '@material-ui/core/Typography';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    width: '100%',
+  },
+  heading: {
+    fontSize: theme.typography.pxToRem(15),
+    fontWeight: theme.typography.fontWeightRegular,
+  },
+}));
 
 const Intro = (props) => {
   return (
@@ -17,21 +33,12 @@ const Intro = (props) => {
   );
 }
 
-export class MrKatTimeline extends Component {
-  constructor() {
-    super();
-  }
+export const MrKatTimeline = ({bgColor, cardColor,caption, children}) => {
+  const classes = useStyles();
 
-  render() {
-    const {
-      bgColor,
-      cardColor,
-      caption,
-      children
-    } = this.props;
-    return (
+  return (
       <div className="w3-margin-bottom">
-        <div className="w3-card w3-padding-16	 d-flex flex-column align-items-center justify-content-center	" style={{minHeight:this.cardSize, backgroundColor: cardColor}}>
+        <div className="w3-card w3-padding-16	 d-flex flex-column align-items-center justify-content-center	" style={{backgroundColor: cardColor}}>
           <img className="title-logo" src={require("./../images/lifePics/mr-kat-logo.jpg")}></img>
           <h3 className="title">Mr. Kat Band</h3>
           {caption && 
@@ -41,6 +48,7 @@ export class MrKatTimeline extends Component {
             
           }
           {children}
+
           
           <div className="container">
           <h3>BCS 101 Show - Dec 9th, 2022</h3>
@@ -111,7 +119,6 @@ export class MrKatTimeline extends Component {
         </div> 
       </div>
     );
-  }
 }
 
 class BasketballTimeline extends Component {

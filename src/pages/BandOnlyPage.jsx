@@ -46,7 +46,7 @@ const Contact = ({bgColor, cardColor}) => {
   );
 }
 export const BandOnlyPage = ({bgColor, cardColor}) => {
-  return (
+    return (
     
     <div className="w3-margin-bottom">
       <div className="block1"> 
