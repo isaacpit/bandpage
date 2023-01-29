@@ -37,7 +37,7 @@ const NavbarAlt = () => {
         <img id="navbar-brand-logo" alt="mr-kat-band-logo" src={require("./../images/lifePics/mr-kat-logo.jpg")} /> 
       </a>
       
-      <a id="navbar-brand-name" className="navbar-brand" href={HOME}>Isaac's Portfolio</a>
+      {/* <a id="navbar-brand-name" className="navbar-brand" href={HOME}>Isaac's Portfolio</a> */}
       
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon"></span>
@@ -76,7 +76,7 @@ const NavbarAlt = () => {
             </>
           }   
         
-          <Link id="link-to-band-page" to="/mr-kat">Band Page</Link>
+          <Link id="link-to-band-page" to="/mr-kat">Mr. Kat</Link>
 
         </ul>
       </div>
