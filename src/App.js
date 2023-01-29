@@ -27,6 +27,7 @@ import { BandOnlyPage } from './pages/BandOnlyPage';
 import Album from './pages/material-ui-examples/Album';
 import Pricing from './pages/material-ui-examples/Pricing';
 import Blog from './pages/material-ui-examples/blog/Blog'
+import BandHomePage from './pages/BandHomePage';
 
 // import Data from './../constants/data';
 
@@ -75,6 +76,7 @@ class App extends Component {
               />  
             }
           />
+          <Route exact path="/new" render={(prop) => <BandHomePage/>}/>
           <Route exact path="/album" render={(prop) => <Album></Album>}/>
           <Route exact path="/pricing" render={(prop) => <Pricing></Pricing>}/>
           <Route exact path="/blog" render={(prop) => <Blog></Blog>}/>
