@@ -45,7 +45,7 @@ const videoData = [
   { src: require('../images/rios/rios-teeth.mp4'), title: 'teeth @ rios'},
   { src: require('../images/mohawk/mohawk-hrsb.mp4'), title: 'hrsb x beach goons @ mohawk'},
   { src: require('../images/rios/rios-toyp.mp4'), title: 'toyp x indigo @ rios'},
-  { src: require('../images/mohawk/mohawk-teeth.mp4'), title: 'teeth'},
+  { src: require('../images/mohawk/mohawk-teeth.mp4'), title: 'teeth @ mohawk'},
 ];
 
 const bandPicsData = [
