@@ -69,8 +69,10 @@ const GlobalStyles = makeStyles((theme) => ({
     // background: globalTheme.palette.background.main,
   },
   imageList: {
-    width: '90%',
+    // width: '80%',
     // height: '200vh'
+    // maxWidth: '80%',
+    // overflow: 'hidden',
   },
   titleBar: {
     background:

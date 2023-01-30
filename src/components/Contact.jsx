@@ -5,7 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 
 
 import MrKatLogo from './MrKatLogo';
-import MohawkBandPic from "../images/mohawk/full-band-mohawk.jpg";
+import MohawkBandPic from "../images/mohawk/full-band-color.jpg";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const ContactCard = ({href, text, src}) => {
+export const ContactCard = ({href, text, src}) => {
   return (
       <a href={href} target="_blank">
         {/* <div className="col d-flex flex-row justify-content-center " style={{maxHeight: "inherit"}}> */}
@@ -60,7 +60,7 @@ const ContactCard = ({href, text, src}) => {
 
 const LargeBandBannerImage = ({}) => {
   return (
-    <img style={{height: 'auto'}} src={require('../images/mohawk/full-band-mohawk.jpg')}/>
+    <img style={{height: 'auto'}} src={require('../images/mohawk/full-band-color.jpg')}/>
   );
 }
 

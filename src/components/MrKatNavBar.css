@@ -1,0 +1,8 @@
+.navBarLink {
+  color: inherit;
+}
+
+.navBarLink:hover {
+  text-decoration: none;
+  color: #aaa;
+}
