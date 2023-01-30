@@ -182,7 +182,7 @@ const SectionTitleText = ({id, children}) => {
   )
 }
 
-const MrKatVideosList = ({data, sectionTitleId}) => {
+const MrKatVideosList = ({data, sectionTitleId, title}) => {
   const classes = GlobalStyles();
   console.log(data);
   const theme = useTheme();
@@ -191,7 +191,7 @@ const MrKatVideosList = ({data, sectionTitleId}) => {
   return (
       <Container my={8} classes={classes.backgroundRoot} maxWidth="lg">
         {/* End hero unit */}
-        <SectionTitleText id={sectionTitleId}>DEMOS</SectionTitleText>
+        <SectionTitleText id={sectionTitleId}>{{}}</SectionTitleText>
         <Grid container spacing={4}>
           {data.map((card) => (
             <Grid item key={card} xs={12} sm={6} md={4}>
@@ -247,9 +247,9 @@ export default function BandHomePage() {
       <Container disableGutters className={classes.gradientRoot} maxWidth='false'>
         <MrKatBioAndContact />
 
-        <MrKatVideosList sectionTitleId='demo-section' data={videoData}/>
-        <MrKatImagesList sectionTitleId='poster-section' data={postersData} title="Posters" cols={4}/>
-        <MrKatImagesList sectionTitleId='pics-section' data={bandPicsData} title="Pics" cols={5}/>
+        <MrKatVideosList sectionTitleId='demo-section' data={videoData} title="DEMOS"/>
+        <MrKatImagesList sectionTitleId='poster-section' data={postersData} title="POSTERS" cols={4}/>
+        <MrKatImagesList sectionTitleId='pics-section' data={bandPicsData} title="PICS" cols={5}/>
         <Footer />
       </Container>
         {/* Hero unit */}
