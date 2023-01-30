@@ -1,23 +1,16 @@
 import React, { Component } from 'react';
-import Jumbotron from '../components/Jumbotron';
 import {  Link } from "react-router-dom";
+import { Container, Typography } from '@material-ui/core';
 
 
-class Error extends Component {
-  render() {
-    return (
-      <div>
-        <div className="jumbotron jumbotron-fluid">
-          <div className="container">
-            <h1 className="display-3">Error 404</h1>
-            <p className="lead">Back to <a href="/">home</a></p>
-            
-          </div>
-        </div>  
-      </div>
-  
-    );
-  }
+const Error = () => {
+  return (
+    <Container>
+      <Typography mt={3} variant='h3' align='center'>
+        404 Whoops 
+      </Typography>
+    </Container>
+  )
 }
 
 export default Error

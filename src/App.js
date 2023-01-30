@@ -1,37 +1,14 @@
 import React, { Component } from 'react';
 import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
-import Home from './pages/Home.jsx';
-import About from './pages/About.jsx';
-import Contact from './pages/Contact.jsx';
-import Error from './pages/Error.jsx';
-import ThemeSwitcher from './pages/ThemeSwitcher';
-import ProfileCard from './components/ProfileCard';
-import CarouselOverlay from './components/CarouselOverlay';
-import Portfolio from './pages/Portfolio';
-import Timeline from './components/Timeline';
-// import TimelineVertical from './components/TimelineVertical';
-import Carousel2Column from './components/Carousel2Column';
-import ThirdsCol from './components/ThirdsCol';
-import ColumnBs from './components/ColumnBs';
-import ColumnCarousel from './components/ColumnCarousel';
-import TimelineHorizontal from './components/TimelineHorizontal';
-// import TimelineVertical2 from './components/TimelineVertical2';
-import TimelineVertical2 from './components/TimelineVertical2';
-import BootstrapSite from './components/bs_site/BootstrapSite';
-import HalfCol from './components/HalfCol';
-import CarouselOverlayGeneral from './components/CarouselOverlayGeneral';
-import { MrKatTimeline } from './components/ForFunTimeline';
-// import { BandOnlyPage } from './pages/BandOnlyPage';
 
 import Album from './pages/material-ui-examples/Album';
 import Pricing from './pages/material-ui-examples/Pricing';
 import Blog from './pages/material-ui-examples/blog/Blog'
 import BandHomePage from './pages/BandHomePage';
+import Error from './pages/Error';
 
 // import Data from './../constants/data';
-
-
 
 
 const data = { 
@@ -75,6 +52,7 @@ class App extends Component {
           <Route exact path="/album" render={(prop) => <Album></Album>}/>
           <Route exact path="/pricing" render={(prop) => <Pricing></Pricing>}/>
           <Route exact path="/blog" render={(prop) => <Blog></Blog>}/>
+          <Route path='*' render={(props) => <Error />}/>
           {/* <Route exact path="/old" 
             render={(props) => 
               <BandOnlyPage

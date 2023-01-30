@@ -26,6 +26,9 @@ import { useTheme, useMediaQuery } from '@material-ui/core';
 import MrKatBioAndContact from '../components/Contact';
 import MrKatLogo from '../components/MrKatLogo';
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
+import MrKatNavBar from '../components/MrKatNavBar';
+
+import GlobalStyles from '../GlobalStyles';
 
 const darkTheme = createTheme({
   palette: {
@@ -35,88 +38,84 @@ const darkTheme = createTheme({
 
 // import { requirePropFactory } from '@material-ui/core';
 
-const useStyles = makeStyles((theme) => ({
-  appBar: {
-    background:'linear-gradient(177deg, #25212f  30%, #111 90%)',
-  },
-  appBarIcon: {
-    marginRight: theme.spacing(2),
-  },
-  heroContent: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(8, 0, 6),
-  },
-  heroButtons: {
-    marginTop: theme.spacing(4),
-  },
-  cardGrid: {
-    paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(8),
-  },
-  card: {
-    // height: '600px',
-    display: 'flex',
-    flexDirection: 'column',
-  },
-  cardMedia: {
-    paddingTop: '56.25%', // 16:9
-  },
-  cardContent: {
-    // flexGrow: 1,
-  },
-  footer: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(6),
-  },
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    overflow: 'hidden',
-    // padding: 20,
-    backgroundColor: theme.palette.background.paper,
-  },
-  imageList: {
-    width: '90%',
-    // height: '200vh'
-  },
-  titleBar: {
-    background:
-      'linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, ' +
-      'rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
-  },
-  imageListIcon: {
-    marginRight: theme.spacing(2),
-    color: 'white',
-  },
-}));
+// const useStyles = makeStyles((theme) => ({
+//   appBar: {
+//     background:'linear-gradient(177deg, #25212f  30%, #111 90%)',
+//   },
+//   heroContent: {
+//     backgroundColor: theme.palette.background.paper,
+//     padding: theme.spacing(8, 0, 6),
+//   },
+//   heroButtons: {
+//     marginTop: theme.spacing(4),
+//   },
+//   cardGrid: {
+//     paddingTop: theme.spacing(8),
+//     paddingBottom: theme.spacing(8),
+//   },
+//   card: {
+//     // height: '600px',
+//     display: 'flex',
+//     flexDirection: 'column',
+//   },
+//   cardMedia: {
+//     paddingTop: '56.25%', // 16:9
+//   },
+//   cardContent: {
+//     // flexGrow: 1,
+//   },
+//   footer: {
+//     backgroundColor: theme.palette.background.paper,
+//     padding: theme.spacing(6),
+//   },
+//   root: {
+//     display: 'flex',
+//     flexWrap: 'wrap',
+//     justifyContent: 'space-around',
+//     overflow: 'hidden',
+//     // padding: 20,
+//     backgroundColor: theme.palette.background.paper,
+//   },
+//   imageList: {
+//     width: '90%',
+//     // height: '200vh'
+//   },
+//   titleBar: {
+//     background:
+//       'linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, ' +
+//       'rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
+//   },
+//   imageListIcon: {
+//     marginRight: theme.spacing(2),
+//     color: 'white',
+//   },
+// }));
 
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 
 const videoData = [
-  { src: require('../images/lifePics/12-09-22-mr-kat-show/hrsb.mp4'), title: 'isaac'},
-  { src: require('../images/lifePics/12-09-22-mr-kat-show/bastard.mp4'), title: 'isaac'},
-  { src: require('../images/lifePics/12-09-22-mr-kat-show/ccr.mp4'), title: 'isaac'},
-  { src: require('../images/lifePics/12-09-22-mr-kat-show/sandbox-love.mp4'), title: 'isaac'},
-  { src: require('../images/lifePics/12-09-22-mr-kat-show/teeth.mp4'), title: 'isaac'},
-  { src: require('../images/lifePics/mr-kat-debut/bastard-end.mp4'), title: 'isaac'},
+  { src: require('../images/101-show/dec-9-22/hrsb.mp4'), title: 'isaac'},
+  { src: require('../images/101-show/dec-9-22/bastard.mp4'), title: 'isaac'},
+  { src: require('../images/101-show/dec-9-22/ccr.mp4'), title: 'isaac'},
+  { src: require('../images/101-show/dec-9-22/sandbox-love.mp4'), title: 'isaac'},
+  { src: require('../images/101-show/dec-9-22/teeth.mp4'), title: 'isaac'},
 ];
 
 const itemData = [
-  { img: require('../images/lifePics/12-09-22-mr-kat-show/i-1.JPG'), title: 'isaac', authorUrl: "https://www.instagram.com/isaacpit97/", author: 'author', cols: 1, rows: 1 },
-  { img: require('../images/lifePics/12-09-22-mr-kat-show/i-2.JPG'), title: 'isaac', author: 'author', cols: 1, rows: 1 }, 
-  { img: require('../images/lifePics/12-09-22-mr-kat-show/i-3.JPG'), title: 'isaac', author: 'author', cols: 2, rows: 1},
-  { img: require('../images/lifePics/12-09-22-mr-kat-show/i-1.JPG'), title: 'isaac', author: 'author', cols: 1 },
-  { img: require('../images/lifePics/12-09-22-mr-kat-show/i-1.JPG'), title: 'isaac', author: 'author', cols: 2 },
-  { img: require('../images/lifePics/12-09-22-mr-kat-show/i-1.JPG'), title: 'isaac', author: 'author', cols: 1 },
-  { img: require('../images/lifePics/12-09-22-mr-kat-show/i-1.JPG'), title: 'isaac', author: 'author', cols: 1 },
-  { img: require('../images/lifePics/12-09-22-mr-kat-show/i-1.JPG'), title: 'isaac', author: 'author', cols: 1 },
+  { img: require('../images/101-show/dec-9-22/i-1.JPG'), title: 'isaac', authorUrl: "https://www.instagram.com/isaacpit97/", author: 'author', cols: 1, rows: 1 },
+  { img: require('../images/101-show/dec-9-22/i-2.JPG'), title: 'isaac', author: 'author', cols: 1, rows: 1 }, 
+  { img: require('../images/101-show/dec-9-22/i-3.JPG'), title: 'isaac', author: 'author', cols: 2, rows: 1},
+  { img: require('../images/101-show/dec-9-22/i-1.JPG'), title: 'isaac', author: 'author', cols: 1 },
+  { img: require('../images/101-show/dec-9-22/i-1.JPG'), title: 'isaac', author: 'author', cols: 2 },
+  { img: require('../images/101-show/dec-9-22/i-1.JPG'), title: 'isaac', author: 'author', cols: 1 },
+  { img: require('../images/101-show/dec-9-22/i-1.JPG'), title: 'isaac', author: 'author', cols: 1 },
+  { img: require('../images/101-show/dec-9-22/i-1.JPG'), title: 'isaac', author: 'author', cols: 1 },
 ];
 
 
-const MrKatImagesList = ({data, title}) => {
-  const classes = useStyles();
+const MrKatImagesList = ({data, title, subTitle, sectionTitleId}) => {
+  const classes = GlobalStyles();
   console.log(data);
   const theme = useTheme();
   const isSmallerSize = useMediaQuery(theme.breakpoints.down('sm'));
@@ -124,13 +123,9 @@ const MrKatImagesList = ({data, title}) => {
   return (
     <div className={classes.root}>
       
+      <SectionTitleText id={sectionTitleId}>{title}</SectionTitleText>
       <ImageList rowHeight={300} variant='quilted' gap={4} className={classes.imageList} cols={isSmallerSize ? 1 : 5} >
         <ImageListItem key="Subheader" cols={isSmallerSize ? 1 : 5} style={{ height: 'auto' }}>
-          <ListSubheader component="h1">
-          <Typography variant="h3" color="inherit" noWrap>
-            {title}
-          </Typography>
-          </ListSubheader>
         </ImageListItem>
         {data.map((item) => (
           <ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
@@ -156,16 +151,22 @@ const MrKatImagesList = ({data, title}) => {
   );
 }
 
-const MrKatVideosList = ({data, title}) => {
-  const classes = useStyles();
+const SectionTitleText = ({id, children}) => {
+  return (
+    <Typography id={id} style={{marginTop: 100, marginBottom: 20}} variant='h2' align='center'><b>{children}</b></Typography>
+  )
+}
+
+const MrKatVideosList = ({data}) => {
+  const classes = GlobalStyles();
   console.log(data);
   const theme = useTheme();
   const isSmallerSize = useMediaQuery(theme.breakpoints.down('sm'));
   console.log("IS SMALLER SIZE: ", isSmallerSize);
   return (
-    <div className={classes.root}>
-      <Container className={classes.cardGrid} maxWidth="lg">
+      <Container my={8} classes={classes.backgroundRoot} maxWidth="lg">
         {/* End hero unit */}
+        <SectionTitleText id="demo-section">DEMOS</SectionTitleText>
         <Grid container spacing={4}>
           {data.map((card) => (
             <Grid item key={card} xs={12} sm={6} md={4}>
@@ -173,8 +174,8 @@ const MrKatVideosList = ({data, title}) => {
               
                 <video controls src={card.src} loading='lazy' type="video/mp4"/>
                 <CardContent className={classes.cardContent} >
-                  <Typography variant='caption' sx={{p:0}}>
-                    Heading Video Description
+                  <Typography variant='caption' color='textSecondary'  sx={{p:0}}>
+                    {card.title}
                   </Typography>
                 </CardContent>
               </Card>
@@ -182,37 +183,40 @@ const MrKatVideosList = ({data, title}) => {
           ))}
         </Grid>
       </Container>
-    </div>
   );
 }
 
+const Footer = () => {
+  const classes = GlobalStyles();
+  return (
+    <Container className={classes.footerContainer}>
+      <Box m={8}>
+        <Typography align="center" color="textSecondary">Website by Isaac Pitblado</Typography>
+      </Box>
+      
+    </Container>
+  )
+}
+
 export default function BandHomePage() {
-  const classes = useStyles();
+  const classes = GlobalStyles();
 
   return (
     <React.Fragment>
       <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      <AppBar position="relative" className={classes.appBar}>
-        <Toolbar>
-          {/* <CameraIcon className={classes.appBarIcon} /> */}
-          <MrKatLogo width={40} marginRight={12}  className={classes.appBarIcon} />
-          <Typography variant="h6" color="inherit" noWrap>
-            <b> 
-              MR. KAT
-            </b>
-            
-          </Typography>
-        </Toolbar>
-      </AppBar>
-      <main>
-        {/* Hero unit */}
+      <MrKatNavBar />
+      <Container disableGutters className={classes.gradientRoot} maxWidth='false'>
         <MrKatBioAndContact />
-        <MrKatVideosList data={videoData} title="Demos"/>
-        <MrKatImagesList data={itemData} title="Dec 9th Show"/>
-        <MrKatImagesList data={itemData} title="Dec 9th Show"/>
+
+        <MrKatVideosList data={videoData}/>
+        <MrKatImagesList sectionTitleId='mohawk-section' data={itemData} title="Dec 9th Show"/>
+        <MrKatImagesList sectionTitleId='rio-section' data={itemData} title="Dec 9th Show"/>
+        <Footer />
+      </Container>
+        {/* Hero unit */}
         
-      </main>
+        
       </ThemeProvider>
     </React.Fragment>
   );

@@ -5,7 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 
 
 import MrKatLogo from './MrKatLogo';
-import MohawkBandPic from "../images/lifePics/mohawk/full-band-mohawk.jpeg";
+import MohawkBandPic from "../images/mohawk/full-band-mohawk.jpg";
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -60,7 +60,7 @@ const ContactCard = ({href, text, src}) => {
 
 const LargeBandBannerImage = ({}) => {
   return (
-    <img style={{height: 'auto'}} src={require('../images/lifePics/mohawk/full-band-mohawk.jpeg')}/>
+    <img style={{height: 'auto'}} src={require('../images/mohawk/full-band-mohawk.jpg')}/>
   );
 }
 
@@ -81,7 +81,7 @@ const MrKatBioAndContact = ({bgColor, cardColor}) => {
             item
             container
             direction="row"
-            justifyContent="center"
+              justifyContent="center"
             alignItems="center"
             spacing={4}
           >
@@ -97,7 +97,7 @@ const MrKatBioAndContact = ({bgColor, cardColor}) => {
                     alignItems="center"
                   >
                     <Box mr={2}>
-                      <MrKatLogo />
+                      <MrKatLogo width={100}/>
                     </Box>
                     
                     <WhiteTextTypography variant='h3'>
@@ -121,8 +121,11 @@ const MrKatBioAndContact = ({bgColor, cardColor}) => {
             >
               <Box p={3} className={classes.paper}>
                 <WhiteTextTypography variant='h5' text='center'>We are looking to gig in the Austin, San Antonio, College Station, and Dallas area. Our band members are: Kat (vocals and guitar), Isaac (guitar), Johnny (drums), and Victor (bass). Here's some of our demos.</WhiteTextTypography>
-                <WhiteTextTypography variant='h4'>Contact us</WhiteTextTypography>
-                <WhiteTextTypography variant='h6' align='center' color="textSecondary">Shoot us a DM on the band instagram page or email us at <b>mrkat.mp3@gmail.com</b></WhiteTextTypography>
+                <Box m={4}>
+                  <WhiteTextTypography variant='h4' align="center">Contact us</WhiteTextTypography>
+                  <WhiteTextTypography variant='h6' align='center' color="textSecondary">Shoot us a DM on the band instagram page or email us at <b>mrkat.mp3@gmail.com</b></WhiteTextTypography>
+                </Box>
+                
                 <Grid 
                   cols={4}
                   container
@@ -144,75 +147,6 @@ const MrKatBioAndContact = ({bgColor, cardColor}) => {
               </Box>
               
             </Grid>
-            
-            {/* <Grid 
-
-            item>
-              <Grid 
-                direction="row"
-                justifyContent="center"
-                alignItems="center"
-                container>
-                <Grid 
-                  item>
-                  <Card>
-                    <MrKatLogo/>
-                    <Typography color='white' variant='h3'>
-                      MR. KAT
-                    </Typography>
-                  </Card>
-                </Grid>
-              </Grid>
-            </Grid>
-            <Grid
-              // container
-              direction="column"
-              justifyContent="center"
-              alignItems="center"
-              alignContent='center'
-              className={classes.heroCard}
-              spacing={3}
-            >
-              <Grid 
-              >
-                <Paper className={classes.paper}></Paper>
-              </Grid>
-              <Grid
-                item
-                direction="column"
-                container
-                justifyContent="center"
-                alignItems="center"
-              >
-                
-                <Typography variant="h5" align="center" color="textSecondary" gutterBottom>
-                  We are looking to gig in the Austin, San Antonio, College Station, and Dallas area. Our band members are: Kat (vocals and guitar), Isaac (guitar), Johnny (drums), and Victor (bass). Here's some of our demos.
-                </Typography>
-              </Grid>
-              
-            </Grid>
-              <Card className={classes.heroCard} >
-            <Typography variant='h4'>Contact us</Typography>
-            <Typography variant='h5' align='center' color="textSecondary">Shoot us a DM on the band instagram page or email us at <b>mrkat.mp3@gmail.com</b></Typography>
-            <Grid 
-              cols={4}
-              container
-              direction="row"
-              justifyContent="center"
-              alignItems="center"
-            >
-              <ContactCard
-                text="Band Page"
-                href="https://www.instagram.com/mrkatband/"
-                src="https://img.icons8.com/color/100/000000/instagram-new--v1.png"
-              />
-              <ContactCard
-                text="Email"
-                href={"mailto:mrkat.mp3@gmail.com"}  
-                src="https://img.icons8.com/fluency/100/000000/apple-mail.png"
-              />
-            </Grid> 
-          </Card> */}
             
           </Grid>
       </Grid>
