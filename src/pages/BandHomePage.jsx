@@ -191,7 +191,7 @@ const MrKatVideosList = ({data, sectionTitleId, title}) => {
   return (
       <Container my={8} classes={classes.backgroundRoot} maxWidth="lg">
         {/* End hero unit */}
-        <SectionTitleText id={sectionTitleId}>{{}}</SectionTitleText>
+        <SectionTitleText id={sectionTitleId}>{title}</SectionTitleText>
         <Grid container spacing={4}>
           {data.map((card) => (
             <Grid item key={card} xs={12} sm={6} md={4}>
