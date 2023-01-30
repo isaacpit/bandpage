@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "73ba5c3ce27119e8a943",
-    "url": "mrkatband.com/static/css/main.08c9a6df.chunk.css"
+    "revision": "05d63c691a7537fe7826",
+    "url": "mrkatband.com/static/css/main.04089e13.chunk.css"
   },
   {
-    "revision": "73ba5c3ce27119e8a943",
-    "url": "mrkatband.com/static/js/main.6e076b49.chunk.js"
+    "revision": "05d63c691a7537fe7826",
+    "url": "mrkatband.com/static/js/main.bf1410d3.chunk.js"
   },
   {
     "revision": "c4c7aa8bfe0ac07f91bf",
     "url": "mrkatband.com/static/js/runtime~main.b30fc494.js"
   },
   {
-    "revision": "7dad1ba20965a55a1a07",
+    "revision": "2ed9664273062eea1ee5",
     "url": "mrkatband.com/static/css/2.3c283201.chunk.css"
   },
   {
-    "revision": "7dad1ba20965a55a1a07",
-    "url": "mrkatband.com/static/js/2.9ce183a1.chunk.js"
+    "revision": "2ed9664273062eea1ee5",
+    "url": "mrkatband.com/static/js/2.52d6ec18.chunk.js"
   },
   {
     "revision": "4737dda17c37cc2d4030c2553599c3e6",
@@ -272,7 +272,7 @@ self.__precacheManifest = [
     "url": "mrkatband.com/static/media/blog-post.3.8d6e276b.md"
   },
   {
-    "revision": "6829b06aaed246968130fd8d6f3c66a9",
+    "revision": "825f95c21beb64f8a7c75d24488b3cbb",
     "url": "mrkatband.com/index.html"
   }
 ];
