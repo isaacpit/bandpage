@@ -60,22 +60,17 @@ const data = {
   
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    console.log("PUBLIC_URL=", process.env.PUBLIC_URL);
+  }
+  
   render() {
+    
     return (
       <Router basename={process.env.PUBLIC_URL}>
         <Switch>
-          {/* <Route exact path="/" component={Portfolio}/> */}
-          {/* LIVE */}
-          {/* <Route exact path="/mr-kat" render={(props) => <Portfolio {...props} id="first" data={data}/>}/> */}
-          {/* <Route exact path="/portfolio-web" render={(props) => <Portfolio {...props} id="first" data={data}/>}/> */}
-          <Route exact path="/" 
-            render={(props) => 
-              <BandOnlyPage
-                bgColor={data.colors.purple2}
-                cardColor={data.colors.white}
-              />  
-            }
-          />
+          <Route exact path="/" render={(prop) => <BandHomePage/>}/>
           <Route exact path="/new" render={(prop) => <BandHomePage/>}/>
           <Route exact path="/album" render={(prop) => <Album></Album>}/>
           <Route exact path="/pricing" render={(prop) => <Pricing></Pricing>}/>
