@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/bandpage-mrkatband.com/precache-manifest.603b95a2dc1d07e395eeafd10c3b2dbb.js"
+  "/bandpage/precache-manifest.a23473ab19b8915e5e53d3c54e082fca.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/bandpage-mrkatband.com/index.html", {
+workbox.routing.registerNavigationRoute("/bandpage/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
