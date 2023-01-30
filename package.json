@@ -1,6 +1,6 @@
 {
-  "name": "simple-react-router-website",
-  "homepage": "https://isaacpit.github.io/bandpage-mrkatband.com",
+  "name": "mr-kat-band-page",
+  "homepage": "https://mrkatband.com",
   "version": "0.1.0",
   "private": false,
   "dependencies": {

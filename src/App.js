@@ -22,7 +22,7 @@ import BootstrapSite from './components/bs_site/BootstrapSite';
 import HalfCol from './components/HalfCol';
 import CarouselOverlayGeneral from './components/CarouselOverlayGeneral';
 import { MrKatTimeline } from './components/ForFunTimeline';
-import { BandOnlyPage } from './pages/BandOnlyPage';
+// import { BandOnlyPage } from './pages/BandOnlyPage';
 
 import Album from './pages/material-ui-examples/Album';
 import Pricing from './pages/material-ui-examples/Pricing';
@@ -75,14 +75,14 @@ class App extends Component {
           <Route exact path="/album" render={(prop) => <Album></Album>}/>
           <Route exact path="/pricing" render={(prop) => <Pricing></Pricing>}/>
           <Route exact path="/blog" render={(prop) => <Blog></Blog>}/>
-          <Route exact path="/old" 
+          {/* <Route exact path="/old" 
             render={(props) => 
               <BandOnlyPage
                 bgColor={data.colors.purple2}
                 cardColor={data.colors.white}
               />  
             }
-          />
+          /> */}
         </Switch>
       </Router>
     );
