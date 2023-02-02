@@ -3,7 +3,7 @@ import { AppBar, Toolbar, Typography, makeStyles, Box} from "@material-ui/core";
 import MrKatLogo from "./MrKatLogo";
 import GlobalStyles from "../GlobalStyles";
 import { HashLink } from 'react-router-hash-link';
-import './MrKatNavBar.css'
+import '../pages/Global.css'
 import { Link } from "react-router-dom/cjs/react-router-dom";
 
 

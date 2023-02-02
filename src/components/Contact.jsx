@@ -2,10 +2,13 @@ import React, { Component } from 'react';
 import { Container, Grid, Typography, Box, Card, Paper, useTheme, useMediaQuery} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
 
 
 import MrKatLogo from './MrKatLogo';
 import MohawkBandPic from "../images/mohawk/full-band-color.jpg";
+
+import '../pages/Global.css'
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -32,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     // height: 400,
-    width: 400,
+    width: 350,
     borderRadius: 20,
     // backgroundColor: '#1f1f33',
     background:'linear-gradient(160deg,  #111 30%, #25212f 90%)',
@@ -41,19 +44,35 @@ const useStyles = makeStyles((theme) => ({
     // height: 400,
     // width: 400,
     backgroundColor: '#0000'
+  },
+  contactUsBox: {
+    padding: "40px 0px",
+    margin: 0,
+    // margin: 10
   }
 }));
 
-export const ContactCard = ({href, text, src}) => {
+export const ContactCard = ({href, src, alt, children, ...other}) => {
   return (
-      <a href={href} target="_blank">
+      <Link className="navBarLink" href={href} target="_blank">
         {/* <div className="col d-flex flex-row justify-content-center " style={{maxHeight: "inherit"}}> */}
-          <div className = "d-flex flex-column align-items-center justify-content-center"> 
-            <img width="50px" height="50px" src={src} alt={text}/>
-            <WhiteTextTypography className="p-2">{text}</WhiteTextTypography>
-          </div>
+          <Box 
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            style={children ? {marginBottom: 10} : {}}
+          >
+            {children}
+            <img style={children ? {marginLeft: 8} : {}} width="50px" height="50px" 
+              src={src} 
+              // src={require('../images/icons/instagram-icon.png')} 
+              alt={alt}
+            
+            />
+          </Box>
+          
         {/* </div> */}
-      </a>
+      </Link>
     
   );
 }
@@ -70,7 +89,7 @@ const WhiteTextTypography = withStyles({
   }
 })(Typography);
 
-const MrKatBioAndContact = ({bgColor, cardColor}) => {
+const MrKatCoverBioAndContact = ({bgColor, cardColor}) => {
   const classes = useStyles();
   const theme = useTheme();
   const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
@@ -121,27 +140,28 @@ const MrKatBioAndContact = ({bgColor, cardColor}) => {
             >
               <Box p={3} className={classes.paper}>
                 <WhiteTextTypography variant='h5' text='center'>We are looking to gig in the Austin, San Antonio, College Station, and Dallas area. Our band members are: Kat (vocals and guitar), Isaac (guitar), Johnny (drums), and Victor (bass). Here's some of our demos.</WhiteTextTypography>
-                <Box m={4}>
+                <Box m={4} className={classes.contactUsBox}>
                   <WhiteTextTypography variant='h4' align="center">Contact us</WhiteTextTypography>
                   <WhiteTextTypography variant='h6' align='center' color="textSecondary">Shoot us a DM on the band instagram page or email us at <b>mrkat.mp3@gmail.com</b></WhiteTextTypography>
                 </Box>
                 
                 <Grid 
-                  cols={4}
+                  cols={2}
                   container
                   direction="row"
-                  justifyContent="center"
+                  justifyContent="space-evenly"
                   alignItems="center"
                 >
                   <ContactCard
-                    text="Band Page"
+                    alt="Band Page Instagram icon"
                     href="https://www.instagram.com/mrkatband/"
-                    src="https://img.icons8.com/color/100/000000/instagram-new--v1.png"
+                    src={require('../images/icons/instagram-icon.png')}
                   />
                   <ContactCard
-                    text="Email"
+                    text="Email Icon"
                     href={"mailto:mrkat.mp3@gmail.com"}  
-                    src="https://img.icons8.com/fluency/100/000000/apple-mail.png"
+                    src={require('../images/icons/mail.png')}
+                    // style={{marginLeft: 100}}
                   />
                 </Grid> 
               </Box>
@@ -158,4 +178,4 @@ const MrKatBioAndContact = ({bgColor, cardColor}) => {
   );
 }
 
-  export default MrKatBioAndContact;
+  export default MrKatCoverBioAndContact;

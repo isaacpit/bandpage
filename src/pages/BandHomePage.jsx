@@ -23,19 +23,15 @@ import IconButton from '@material-ui/core/IconButton';
 import InfoIcon from '@material-ui/icons/Info';
 import CameraAltIcon from '@material-ui/icons/CameraAlt';
 import { useTheme, useMediaQuery } from '@material-ui/core';
-import MrKatBioAndContact from '../components/Contact';
+import MrKatCoverBioAndContact from '../components/Contact';
 import MrKatLogo from '../components/MrKatLogo';
 import { ThemeProvider, createTheme } from '@material-ui/core/styles';
 import MrKatNavBar from '../components/MrKatNavBar';
 import { ContactCard } from '../components/Contact'
 
-import GlobalStyles from '../GlobalStyles';
+import GlobalStyles, {globalTheme} from '../GlobalStyles';
 
-const darkTheme = createTheme({
-  palette: {
-    type: 'dark',
-  },
-});
+import './Global.css'
 
 const videoData = [
   { src: require('../images/rios/rios-wcc.mp4'), title: 'wcc @ rios'},
@@ -48,82 +44,97 @@ const videoData = [
   { src: require('../images/mohawk/mohawk-teeth.mp4'), title: 'teeth @ mohawk'},
 ];
 
+const author_oci = {
+  authorUrl: "https://www.instagram.com/isaacpit97/",
+  author: "oci"
+}
+
+const author_jake = {
+  authorUrl: "https://www.instagram.com/isaacpit97/",
+  author: "jake"
+}
+
 const bandPicsData = [
-  { img: require('../images/mohawk/full-band-color.jpg'), title: 'mr kat', authorUrl: "https://www.instagram.com/isaacpit97/", author: 'author', cols: 2, rows: 2},
-  { img: require('../images/mohawk/full-band-side.jpg'), title: 'mr kat', author: '', cols: 2, rows: 2 }, 
-  { img: require('../images/mohawk/kat-growl.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/band-pics/isaac.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/band-pics/band-pic.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/dec-9-22/i-1.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/dec-9-22/i-2.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/dec-9-22/i-3.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/dec-9-22/i-k-1.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/dec-9-22/i-k-2.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/dec-9-22/i-k-3.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/dec-9-22/i-k-v-1.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/dec-9-22/j-1.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/dec-9-22/j-2.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  
+  { img: require('../images/mohawk/full-band-color.jpg'), title: 'mr kat', ...author_oci, cols: 2, rows: 2},
+  { img: require('../images/mohawk/full-band-side.jpg'), title: 'mr kat', ...author_oci, cols: 2, rows: 2 }, 
+  { img: require('../images/mohawk/kat-growl.jpg'), title: 'isaac', ...author_oci, cols: 1, rows: 2 }, 
+
+  { img: require('../images/101-show/jan-20-23/i-k-j.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 },   
   { img: require('../images/101-show/dec-9-22/j-3.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/dec-9-22/j-k-1.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/dec-9-22/k-1.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/dec-9-22/k-v-j-1.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/dec-9-22/v-2.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/dec-9-22/v-k-1.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/i-1.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/i-2.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/i-k-2.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/i-k-j.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/i-k-v.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/i-k.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/j-2.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/j-3.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/j-4.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/j-5.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/j-6.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/j-8.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/j-9.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/j.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/k-2.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/k-3.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/k-4.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/k-5.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/k-6.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/k-7.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/k-8.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/k-9.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/k-10.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/k-11.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/k-12.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/k-n.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/k-v-2.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/k-v-j.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  { img: require('../images/101-show/jan-20-23/v-4.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1}, 
+  { img: require('../images/101-show/jan-20-23/i-1.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1}, 
   { img: require('../images/101-show/jan-20-23/k-v.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/k.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/v-3.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/v-4.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/v-5.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/v.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  
+  { img: require('../images/101-show/dec-9-22/k-v-j-1.jpg'), title: 'isaac', author: 'kat', cols: 2, rows: 2 }, 
+  { img: require('../images/101-show/jan-20-23/v-5.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 2 }, 
+  { img: require('../images/101-show/jan-20-23/j-3.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 2 }, 
+  { img: require('../images/101-show/dec-9-22/i-2.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 2 }, 
+
+  { img: require('../images/101-show/jan-20-23/i-k.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1},
+  { img: require('../images/101-show/jan-20-23/j.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
   { img: require('../images/mr-kat-debut/mr-kat-at-101.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/mr-kat-debut/sydney-climbing.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/nye/nye-house-show-group.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/nye/nye-house-show-setup.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/nye/nye-house-show.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/nye/nye-pic.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/nye/nye-show.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/band-pics/mr-kat-logo.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
   { img: require('../images/band-pics/mr-kat-sticker.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  { img: require('../images/101-show/jan-20-23/k-11.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 },
+  
+  { img: require('../images/101-show/jan-20-23/i-k-v.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 2 }, 
+  { img: require('../images/101-show/jan-20-23/j-4.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 2 }, 
+  { img: require('../images/101-show/dec-9-22/i-k-1.jpg'), title: 'isaac', author: 'kat', cols: 2, rows: 2}, 
+  { img: require('../images/101-show/jan-20-23/v.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 2 },   
+
+  // { img: require('../images/101-show/dec-9-22/i-1.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/k-12.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/nye/nye-house-show.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/dec-9-22/v-2.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 },
+  // { img: require('../images/101-show/dec-9-22/k-1.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/dec-9-22/j-1.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/k.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/v-3.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/dec-9-22/i-k-v-1.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/dec-9-22/i-k-2.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/dec-9-22/i-k-3.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/j-2.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/dec-9-22/j-k-1.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/dec-9-22/v-k-1.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/i-2.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/i-k-2.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/j-5.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/j-6.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/j-8.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/j-9.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/k-2.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/k-3.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/k-4.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/k-10.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/k-n.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/k-v-j.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/dec-9-22/j-2.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/nye/nye-show.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/k-v-2.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/mr-kat-debut/sydney-climbing.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/nye/nye-house-show-group.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/nye/nye-house-show-setup.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/k-5.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/k-6.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/k-7.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/k-8.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/k-9.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/dec-9-22/i-3.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/band-pics/isaac.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/band-pics/band-pic.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 },  
+  // { img: require('../images/nye/nye-pic.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
 ]
 
 const postersData = [
   { img: require('../images/posters/2023-jan-1-mohawk-poster.jpg'), title: 'isaac', authorUrl: "https://www.instagram.com/isaacpit97/", author: 'author', cols: 2, rows: 2 },
-  { img: require('../images/posters/2022-nye-poster.jpg'), title: 'isaac', authorUrl: "https://www.instagram.com/isaacpit97/", author: 'author', cols: 2, rows: 2 },
+    { img: require('../images/posters/2022-nye-poster.jpg'), title: 'isaac', authorUrl: "https://www.instagram.com/isaacpit97/", author: 'author', cols: 2, rows: 2 },
   { img: require('../images/posters/2023-jan-27-rio.jpg'), title: 'isaac', authorUrl: "https://www.instagram.com/isaacpit97/", author: 'author', cols: 1, rows: 1 },
-  { img: require('../images/posters/2022-sept-30-poster.jpg'), title: 'isaac', authorUrl: "https://www.instagram.com/isaacpit97/", author: 'author', cols: 1, rows: 1 },
+  { img: require('../images/posters/2022-sept-30-poster.jpg'), title: 'isaac', authorUrl: "https://www.instagram.com/isaacpit97/", author: 'author', cols: 1, rows: 1},
   { img: require('../images/posters/2022-dec-9-poster.jpg'), title: 'isaac', authorUrl: "https://www.instagram.com/isaacpit97/", author: 'author', cols: 1, rows: 1 },
   { img: require('../images/posters/2023-jan-20-at-101.jpg'), title: 'isaac', authorUrl: "https://www.instagram.com/isaacpit97/", author: 'author', cols: 1, rows: 1 },
 ];
 
-const MrKatImagesList = ({data, title, subTitle, sectionTitleId, cols}) => {
+const MrKatImagesList = ({data, title, regularRowHeight, smallRowHeight, subTitle, sectionTitleId, smallCols, cols}) => {
   const classes = GlobalStyles();
   console.log(data);
   const theme = useTheme();
@@ -145,21 +156,37 @@ const MrKatImagesList = ({data, title, subTitle, sectionTitleId, cols}) => {
           align='center'
           alignItems='center'
         >
-          <ImageList align='center' alignItems='center' rowHeight={300} gap={4} className={classes.imageList} cols={isSmallerSize ? 1 : cols} >
-            <ImageListItem key="Subheader" cols={isSmallerSize ? 1 : cols} style={{ height: 'auto' }}>
+          <ImageList align='center' alignItems='center' rowHeight={isSmallerSize ? smallRowHeight : regularRowHeight} gap={12} className={classes.imageList} cols={isSmallerSize ? smallCols : cols} >
+              <ImageListItem key="Subheader" cols={isSmallerSize ? smallCols : cols} style={{ height: 'auto' }}>
               </ImageListItem>
               {data.map((item) => (
                 <ImageListItem key={item.img} cols={isSmallerSize? 1 : (item.cols || 1)} rows={isSmallerSize ? 1 : (item.rows || 1)}>
-                  <img src={item.img} alt={item.title} loading='lazy' />
+                  {/* let image handle unless we want full height */}
+                  <img src={item.img} height={item.height ? item.height : undefined} width={item.width ? item.width : undefined} alt={item.title} loading='lazy' />
                   <ImageListItemBar
-                    title={item.title}
-                    subtitle={<span>by: {item.author}</span>}
+
                     actionIcon={
-                      <IconButton target="_blank" href={item.authorUrl || ""} aria-label={`info about ${item.title}`} className={classes.imageListIcon} >
-                        <CameraAltIcon className={classes.imageListIcon} />
-                      </IconButton>
+                      <Box 
+                        item
+                        display="flex"
+                        container
+                        direction="row"
+                        justifyContent="flex-start"
+                        alignItems="center"
+                        // spacing={4}
+                        style={{marginLeft: 4, padding: 4}}
+                        >
+                        <IconButton style={{margin:0, padding: "8px 8px", borderRadius: 4}} alignItems="center" justifyContent="center" target="_blank" href={item.authorUrl || ""} aria-label={`info about ${item.title}`} className={classes.imageListIcon} >
+                            <CameraAltIcon style={{margin:0}} className={classes.imageListIcon} />
+                            <Typography style={{margin: "0px 8px"}} variant='body2' color="textSecondary">{"@" + item.author}</Typography>    
+                        </IconButton>  
+                        
+                      </Box>
                     }
-                    position="top"
+
+                    title={<Typography align="right" variant="body1">{item.title}</Typography>}
+                    // subtitle={"@" + item.author}
+                    position="bottom"
                     actionPosition="left"
                     className={classes.titleBar}
                   />
@@ -176,9 +203,9 @@ const MrKatImagesList = ({data, title, subTitle, sectionTitleId, cols}) => {
   );
 }
 
-const SectionTitleText = ({id, children}) => {
+const SectionTitleText = ({id, children, variant, marginTop, marginBottom}) => {
   return (
-    <Typography id={id} style={{marginTop: 100, marginBottom: 20}} variant='h2' align='center'><b>{children}</b></Typography>
+    <Typography id={id} style={{marginTop: marginTop ? marginTop : 100, marginBottom: marginBottom ? marginBottom : 20}} variant={variant ? variant : 'h2'} align="center"><b>{children}</b></Typography>
   )
 }
 
@@ -191,8 +218,8 @@ const MrKatVideosList = ({data, sectionTitleId, title}) => {
   return (
       <Container my={8} classes={classes.backgroundRoot} maxWidth="lg">
         {/* End hero unit */}
-        <SectionTitleText id={sectionTitleId}>{title}</SectionTitleText>
-        <Grid container spacing={4}>
+        <SectionTitleText marginTop={20} id={sectionTitleId}>{title}</SectionTitleText>
+        <Grid container spacing={8}>
           {data.map((card) => (
             <Grid item key={card} xs={12} sm={6} md={4}>
               <Card className={classes.card}>
@@ -216,23 +243,84 @@ const Footer = () => {
   return (
     <Container className={classes.footerContainer}>
       <Grid 
-        container item
+        container 
+        item
         direction="row"
         justifyContent="center"
         alignItems="center"
       >
-        <Box my={8} mx={3}>
-          <Typography variant="h6" align="center">WEBSITE BY ISAAC PITBLADO</Typography>
-        </Box>
+
+        
         <ContactCard
             text="Isaac's Insta"
             href="https://www.instagram.com/isaacpit97/"
-            src="https://img.icons8.com/color/100/000000/instagram-new--v1.png"
-          />
+            src={require('../images/icons/instagram-icon.png')}
+            // style={{margin: "20px 8px"}}
+        >
+          <Typography variant="h6" align="center">Website by <b>ISAAC PITBLADO</b></Typography>
+        </ContactCard>
+        
       </Grid>
-      
+      <Typography variant="h6" align="center" className="navBarLink" style={{marginTop: 20, color: "#888c"}}>Icons by <Link className="navBarLink" target="_blank" href="https://icons8.com">Icons8</Link></Typography>
       
     </Container>
+  )
+}
+
+const DemosButton = ({href, label, iconSrc, ...otherProps}) => {
+  const classes = GlobalStyles();
+
+  return (
+    <Card className={`demoButton ${classes.lightCard}`} {...otherProps}>
+      <Link className="navBarLink" target="_blank" href={href}>
+        <Box  
+          item
+          container
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+          display="flex"
+          style={{padding: "20px 40px"}}
+        >
+            <SectionTitleText variant="h5" marginTop={10} marginBottom={10}>{label}</SectionTitleText>  
+            <img style={{marginLeft: 20}} height={80} width={80} src={iconSrc}/>
+          </Box>
+      </Link>
+    </Card>
+  )
+
+}
+
+const DemosSection = ({sectionTitleId}) => {
+  const classes = GlobalStyles();
+
+  return (
+    <Box 
+      my={8}  style={{margin: "20px 0px"}} classes={classes.backgroundRoot} maxWidth="lg"
+      cols={2}
+      s={1}
+      
+    >
+      <SectionTitleText id={sectionTitleId} marginTop={20}>DEMOS</SectionTitleText>
+      <Grid
+        container
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+        display="flex"
+        spacing={4}
+        md={12}
+      >
+        <Grid item>
+          <DemosButton label="DEMO LINK" iconSrc={require('../images/icons/google-drive.png')} href="https://drive.google.com/drive/folders/1pAB-OROGAbzrvcHXqlT7NMET4XGsrdHX?usp=sharing" />
+        </Grid>
+        <Grid item>
+          <DemosButton label="BAND INSTA" iconSrc={require('../images/icons/instagram-icon.png')} href="https://instagram.com/mrkatband" />
+        </Grid>
+
+      </Grid>
+      
+    </Box>
   )
 }
 
@@ -241,15 +329,15 @@ export default function BandHomePage() {
 
   return (
     <React.Fragment>
-      <ThemeProvider theme={darkTheme}>
+      <ThemeProvider theme={globalTheme}>
       <CssBaseline />
       <MrKatNavBar />
-      <Container disableGutters className={classes.gradientRoot} maxWidth='false'>
-        <MrKatBioAndContact />
-
-        <MrKatVideosList sectionTitleId='demo-section' data={videoData} title="DEMOS"/>
-        <MrKatImagesList sectionTitleId='poster-section' data={postersData} title="POSTERS" cols={4}/>
-        <MrKatImagesList sectionTitleId='pics-section' data={bandPicsData} title="PICS" cols={5}/>
+      <Container disableGutters className={classes.gradientRoot} maxWidth='false'>        
+        <MrKatCoverBioAndContact />
+        <DemosSection sectionTitleId="demo-section"/>
+        <MrKatVideosList sectionTitleId='vids-section' data={videoData} title="VIDS"/>
+        <MrKatImagesList sectionTitleId='poster-section' regularRowHeight={300} smallRowHeight={400} data={postersData} title="POSTERS" smallCols={1} cols={4}/>
+        <MrKatImagesList sectionTitleId='pics-section' regularRowHeight={200} smallRowHeight={400} data={bandPicsData} title="PICS" smallCols={2} cols={5}/>
         <Footer />
       </Container>
         {/* Hero unit */}

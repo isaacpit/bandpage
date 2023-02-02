@@ -2,13 +2,24 @@ import React from "react";
 import { makeStyles, createTheme} from "@material-ui/core";
 import BackgroundImage from "../src/images/backgrounds/asfalt-dark.png";
 
-const globalTheme = createTheme({
+export const globalTheme = createTheme({
   palette: {
     background: {
       main: 'linear-gradient(177deg, #25212f  30%, #111 90%)'
     }
   },
+  palette: {
+    type: 'dark',
+  },
 });
+
+globalTheme.typography.h6 = {
+  fontSize: '1.2rem',
+  // [globalTheme.breakpoints.up('sm')]: {
+  //   fontSize: '2.0rem',
+  // },
+}
+
 
 
 const GlobalStyles = makeStyles((theme) => ({
@@ -76,8 +87,8 @@ const GlobalStyles = makeStyles((theme) => ({
   },
   titleBar: {
     background:
-      'linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, ' +
-      'rgba(0,0,0,0.3) 70%, rgba(0,0,0,0) 100%)',
+      'linear-gradient(to bottom, rgba(0,0,0,0.0) 0%, ' +
+      'rgba(0,0,0,0.3) 70%, rgba(0,0,0,4) 100%)',
   },
   imageListIcon: {
     marginRight: theme.spacing(2),
@@ -87,8 +98,11 @@ const GlobalStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
   },
   footerContainer: {
-    height: 200,
-  }
+    margin: "80px 20px 40px",
+  },
+  lightCard: {
+    backgroundColor: "#444f"
+  }, 
 }));
 
 export default GlobalStyles;
