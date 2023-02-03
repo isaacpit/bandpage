@@ -346,7 +346,7 @@ export default function BandHomePage() {
       <ThemeProvider theme={globalTheme}>
       <CssBaseline />
       <MrKatNavBar />
-      <Container disableGutters className={classes.gradientRoot} maxWidth='false'>        
+      <Container disableGutters className={classes.gradientRoot} maxWidth='100%'>        
         <MrKatCoverBioAndContact />
         <DemosSection sectionTitleId="demo-section"/>
         <MrKatVideosList sectionTitleId='vids-section' data={videoData} title="VIDS"/>
