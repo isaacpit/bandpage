@@ -93,6 +93,7 @@ const MrKatCoverBioAndContact = ({bgColor, cardColor}) => {
   const classes = useStyles();
   const theme = useTheme();
   const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
+  const isXSmall = useMediaQuery(theme.breakpoints.down('xs'));
   return (
       <>
       <Grid container maxWidth={false} alignItems='flex-end' justifyContent="center" className={classes.mainContainer}>
@@ -116,7 +117,8 @@ const MrKatCoverBioAndContact = ({bgColor, cardColor}) => {
                     alignItems="center"
                   >
                     <Box mr={2}>
-                      <MrKatLogo width={100}/>
+                      {/* add margin bottom if logo and band name get staked on cover page */}
+                      <MrKatLogo marginBottom={isXSmall ? 20 : 0} width={100}/>
                     </Box>
                     
                     <WhiteTextTypography variant='h3'>

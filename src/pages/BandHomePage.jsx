@@ -50,7 +50,7 @@ const author_mrkat = {
 }
 
 const author_beth = {
-  authorUrl: "https://www.instagram.com/isaacpit97/",
+  authorUrl: "https://www.instagram.com/junkdrawerbybeth/",
   author: "junkdrawerbybeth"
 }
 
@@ -65,14 +65,14 @@ const author_emma = {
 }
 
 const videoData = [
-  { src: require('../images/vids/rios-wcc.mp4'), title: 'wcc @ rios'},
-  { src: require('../images/vids/rios-bastard.mp4'), title: 'bastard @ rios'},
-  { src: require('../images/vids/nye-toyp-2.mp4'), title: 'toyp x indigo @ nye house show'},
-  { src: require('../images/vids/mohawk-sandbox.mp4'), title: 'sandbox @ mohawk'},
-  { src: require('../images/vids/rios-teeth.mp4'), title: 'teeth @ rios'},
-  { src: require('../images/vids/mohawk-hrsb.mp4'), title: 'hrsb x beach goons @ mohawk'},
-  { src: require('../images/vids/rios-toyp.mp4'), title: 'toyp x indigo @ rios'},
-  { src: require('../images/vids/mohawk-teeth.mp4'), title: 'teeth @ mohawk'},
+  { src: require('../images/vids/rios-wcc.mp4'), title: 'wcc @ rios', poster: require('../images/vids/rios-wcc-poster.png')}, 
+  { src: require('../images/vids/rios-bastard.mp4'), title: 'bastard @ rios', poster: require('../images/vids/rios-bastard-poster.png')},
+  { src: require('../images/vids/nye-toyp-2.mp4'), title: 'toyp x indigo @ nye house show', poster: require('../images/vids/nye-toyp-poster.png')},
+  { src: require('../images/vids/mohawk-sandbox.mp4'), title: 'sandbox @ mohawk', poster: require('../images/vids/mohawk-sandbox-poster.png')},
+  { src: require('../images/vids/rios-teeth.mp4'), title: 'teeth @ rios', poster: require('../images/vids/rios-teeth-poster.png')},
+  { src: require('../images/vids/mohawk-hrsb.mp4'), title: 'hrsb x beach goons @ mohawk', poster: require('../images/vids/mohawk-hrsb-poster.png')},
+  { src: require('../images/vids/rios-toyp.mp4'), title: 'toyp x indigo @ rios', poster: require('../images/vids/rios-toyp-poster.png')},
+  { src: require('../images/vids/mohawk-teeth.mp4'), title: 'teeth @ mohawk', poster: require('../images/vids/mohawk-teeth-poster.png')},
 ];
 
 const postersData = [
@@ -103,7 +103,7 @@ const bandPicsData = [
 
   { img: require('../images/101-show/jan-20-23/i-k.jpg'), title: undefined, cols: 1, rows: 1, ...author_jake},
   { img: require('../images/101-show/jan-20-23/j.jpg'), title: undefined, cols: 1, rows: 1, ...author_jake }, 
-  { img: require('../images/mr-kat-debut/mr-kat-at-101.jpg'), title: undefined, cols: 1, rows: 1, ...author_jake }, 
+  { img: require('../images/mr-kat-debut/mr-kat-at-101.jpg'), title: undefined, cols: 1, rows: 1, ...author_mrkat }, 
   { img: require('../images/band-pics/mr-kat-sticker.jpg'), title: undefined, cols: 1, rows: 1, ...author_mrkat }, 
   { img: require('../images/101-show/jan-20-23/k-11.jpg'), title: undefined, cols: 1, rows: 1, ...author_jake},
   
@@ -242,7 +242,7 @@ const MrKatVideosList = ({data, sectionTitleId, title}) => {
             <Grid item key={card} xs={12} sm={6} md={4}>
               <Card className={classes.card}>
               
-                <video controls src={card.src} loading='lazy' type="video/mp4"/>
+                <video controls src={card.src} loading='lazy' poster={card.poster ? card.poster : undefined} type="video/mp4"/>
                 <CardContent className={classes.cardContent} >
                   <Typography variant='body' color='textSecondary'  sx={{p:0}}>
                     {card.title}
