@@ -31,7 +31,7 @@ const MrKatNavBar = () => {
         }
         
         
-        <HashLink className="navBarLink" smooth to="/#demo-section">
+        <HashLink className="navBarLink" smooth to="/#demo">
           <Box ml={1}>
             <Typography marginLeft={40} variant="h6" color="inherit" noWrap>
               DEMOS
@@ -39,7 +39,7 @@ const MrKatNavBar = () => {
           </Box>
         </HashLink>
 
-        <HashLink className="navBarLink" smooth to="/#poster-section">
+        <HashLink className="navBarLink" smooth to="/#poster">
           <Box ml={1}>
             <Typography marginLeft={40} variant="h6" color="inherit" noWrap>
               POSTERS
@@ -47,7 +47,7 @@ const MrKatNavBar = () => {
           </Box>
         </HashLink>
 
-        <HashLink className="navBarLink" smooth to="/#pics-section">
+        <HashLink className="navBarLink" smooth to="/#pics">
           <Box ml={1}>
             <Typography marginLeft={40} variant="h6" color="inherit" noWrap>
               PICS

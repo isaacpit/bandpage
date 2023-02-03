@@ -353,10 +353,10 @@ export default function BandHomePage() {
       <MrKatNavBar />
       <Container disableGutters className={classes.gradientRoot} maxWidth='100%'>        
         <MrKatCoverBioAndContact />
-        <DemosSection sectionTitleId="demo-section"/>
-        <MrKatVideosList sectionTitleId='vids-section' data={videoData} title="VIDS"/>
-        <MrKatImagesList sectionTitleId='poster-section' regularRowHeight={300} smallRowHeight={200} data={postersData} title="POSTERS" smallCols={2} cols={4}/>
-        <MrKatImagesList sectionTitleId='pics-section' regularRowHeight={200} smallRowHeight={200} data={bandPicsData} title="PICS" smallCols={2} cols={5}/>
+        <DemosSection sectionTitleId="demo"/>
+        <MrKatVideosList sectionTitleId='vids' data={videoData} title="VIDS"/>
+        <MrKatImagesList sectionTitleId='poster' regularRowHeight={300} smallRowHeight={200} data={postersData} title="POSTERS" smallCols={2} cols={4}/>
+        <MrKatImagesList sectionTitleId='pics' regularRowHeight={200} smallRowHeight={200} data={bandPicsData} title="PICS" smallCols={2} cols={5}/>
         <Footer />
       </Container>
         {/* Hero unit */}
