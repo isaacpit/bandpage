@@ -101,7 +101,8 @@ const GlobalStyles = makeStyles((theme) => ({
     margin: "80px 20px 40px",
   },
   lightCard: {
-    backgroundColor: "#444f"
+    backgroundColor: "#444f",
+    width: 330,
   }, 
 }));
 

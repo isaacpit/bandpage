@@ -1,12 +1,18 @@
-a.navBarLink {
+a.navBarLink, .navBarLink {
   color: inherit;
 }
 
-a.navBarLink:hover {
+a.navBarLink:hover .navBarLink:hover {
   text-decoration: none;
   color: #aaa;
 }
 
 .demoButton:hover {
   background-color: #aaaa;
+  text-decoration: none;
+}
+
+a.photoCredsButton:hover {
+  text-decoration: none;
+  color: 'white';
 }

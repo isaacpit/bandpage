@@ -39,7 +39,6 @@ const data = {
 class App extends Component {
   constructor(props) {
     super(props);
-    console.log("PUBLIC_URL=", process.env.PUBLIC_URL);
   }
   
   render() {

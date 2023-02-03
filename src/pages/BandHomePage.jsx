@@ -12,7 +12,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
-import Link from '@material-ui/core/Link';
+import { Link } from 'react-router-dom';
 import Box from "@material-ui/core/Box";
 import { styled } from '@material-ui/core/styles';
 import ImageList from '@material-ui/core/ImageList';
@@ -33,16 +33,6 @@ import GlobalStyles, {globalTheme} from '../GlobalStyles';
 
 import './Global.css'
 
-const videoData = [
-  { src: require('../images/rios/rios-wcc.mp4'), title: 'wcc @ rios'},
-  { src: require('../images/rios/rios-bastard.mp4'), title: 'bastard @ rios'},
-  { src: require('../images/nye/nye-toyp-2.mp4'), title: 'toyp x indigo @ nye house show'},
-  { src: require('../images/mohawk/mohawk-sandbox.mp4'), title: 'sandbox @ mohawk'},
-  { src: require('../images/rios/rios-teeth.mp4'), title: 'teeth @ rios'},
-  { src: require('../images/mohawk/mohawk-hrsb.mp4'), title: 'hrsb x beach goons @ mohawk'},
-  { src: require('../images/rios/rios-toyp.mp4'), title: 'toyp x indigo @ rios'},
-  { src: require('../images/mohawk/mohawk-teeth.mp4'), title: 'teeth @ mohawk'},
-];
 
 const author_oci = {
   authorUrl: "https://www.instagram.com/isaacpit97/",
@@ -53,6 +43,42 @@ const author_jake = {
   authorUrl: "https://www.instagram.com/isaacpit97/",
   author: "jake"
 }
+
+const author_isaac = {
+  authorUrl: "https://www.instagram.com/isaacpit97/",
+  author: "isaac"
+}
+
+const author_beth = {
+  authorUrl: "https://www.instagram.com/isaacpit97/",
+  author: "junkdrawerbybeth"
+}
+
+const author_elianna = {
+  authorUrl: "https://www.instagram.com/isaacpit97/",
+  author: "eliannasart"
+}
+
+const videoData = [
+  { src: require('../images/vids/rios-wcc.mp4'), title: 'wcc @ rios'},
+  { src: require('../images/vids/rios-bastard.mp4'), title: 'bastard @ rios'},
+  { src: require('../images/vids/nye-toyp-2.mp4'), title: 'toyp x indigo @ nye house show'},
+  { src: require('../images/vids/mohawk-sandbox.mp4'), title: 'sandbox @ mohawk'},
+  { src: require('../images/vids/rios-teeth.mp4'), title: 'teeth @ rios'},
+  { src: require('../images/vids/mohawk-hrsb.mp4'), title: 'hrsb x beach goons @ mohawk'},
+  { src: require('../images/vids/rios-toyp.mp4'), title: 'toyp x indigo @ rios'},
+  { src: require('../images/vids/mohawk-teeth.mp4'), title: 'teeth @ mohawk'},
+];
+
+const postersData = [
+  { img: require('../images/posters/2023-jan-1-mohawk-poster.jpg'), title: 'isaac', ...author_beth, cols: 2, rows: 2 },
+  { img: require('../images/posters/2022-nye-poster.jpg'), title: 'isaac', ...author_elianna, cols: 2, rows: 2 },
+  { img: require('../images/posters/2023-jan-27-rio.jpg'), title: 'isaac', ...author_elianna, cols: 1, rows: 1 },
+  { img: require('../images/posters/2022-sept-30-poster.jpg'), title: 'isaac', ...author_elianna, cols: 1, rows: 1},
+  { img: require('../images/posters/2022-dec-9-poster.jpg'), title: 'isaac', ...author_elianna, author: 'author', cols: 1, rows: 1 },
+  { img: require('../images/posters/2023-jan-20-at-101.jpg'), title: 'isaac', ...author_beth, cols: 1, rows: 1 },
+];
+
 
 const bandPicsData = [
   
@@ -125,21 +151,10 @@ const bandPicsData = [
   // { img: require('../images/nye/nye-pic.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
 ]
 
-const postersData = [
-  { img: require('../images/posters/2023-jan-1-mohawk-poster.jpg'), title: 'isaac', authorUrl: "https://www.instagram.com/isaacpit97/", author: 'author', cols: 2, rows: 2 },
-    { img: require('../images/posters/2022-nye-poster.jpg'), title: 'isaac', authorUrl: "https://www.instagram.com/isaacpit97/", author: 'author', cols: 2, rows: 2 },
-  { img: require('../images/posters/2023-jan-27-rio.jpg'), title: 'isaac', authorUrl: "https://www.instagram.com/isaacpit97/", author: 'author', cols: 1, rows: 1 },
-  { img: require('../images/posters/2022-sept-30-poster.jpg'), title: 'isaac', authorUrl: "https://www.instagram.com/isaacpit97/", author: 'author', cols: 1, rows: 1},
-  { img: require('../images/posters/2022-dec-9-poster.jpg'), title: 'isaac', authorUrl: "https://www.instagram.com/isaacpit97/", author: 'author', cols: 1, rows: 1 },
-  { img: require('../images/posters/2023-jan-20-at-101.jpg'), title: 'isaac', authorUrl: "https://www.instagram.com/isaacpit97/", author: 'author', cols: 1, rows: 1 },
-];
-
 const MrKatImagesList = ({data, title, regularRowHeight, smallRowHeight, subTitle, sectionTitleId, smallCols, cols}) => {
   const classes = GlobalStyles();
-  console.log(data);
   const theme = useTheme();
-  const isSmallerSize = useMediaQuery(theme.breakpoints.down('sm'));
-  console.log("IS SMALLER SIZE: ", isSmallerSize);
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   return (
     <div className={classes.root}>
       
@@ -156,13 +171,13 @@ const MrKatImagesList = ({data, title, regularRowHeight, smallRowHeight, subTitl
           align='center'
           alignItems='center'
         >
-          <ImageList align='center' alignItems='center' rowHeight={isSmallerSize ? smallRowHeight : regularRowHeight} gap={12} className={classes.imageList} cols={isSmallerSize ? smallCols : cols} >
-              <ImageListItem key="Subheader" cols={isSmallerSize ? smallCols : cols} style={{ height: 'auto' }}>
+          <ImageList align='center' alignItems='center' rowHeight={isMobile ? smallRowHeight : regularRowHeight} gap={12} className={classes.imageList} cols={isMobile ? smallCols : cols} >
+              <ImageListItem key="Subheader" cols ={isMobile ? smallCols : cols} style={{ height: 'auto' }}>
               </ImageListItem>
               {data.map((item) => (
-                <ImageListItem key={item.img} cols={isSmallerSize? 1 : (item.cols || 1)} rows={isSmallerSize ? 1 : (item.rows || 1)}>
+                <ImageListItem key={item.img} cols={isMobile? 1 : (item.cols || 1)} rows={isMobile ? 1 : (item.rows || 1)}>
                   {/* let image handle unless we want full height */}
-                  <img src={item.img} height={item.height ? item.height : undefined} width={item.width ? item.width : undefined} alt={item.title} loading='lazy' />
+                  <img src={item.img} alt={item.title} loading='lazy' />
                   <ImageListItemBar
 
                     actionIcon={
@@ -176,7 +191,7 @@ const MrKatImagesList = ({data, title, regularRowHeight, smallRowHeight, subTitl
                         // spacing={4}
                         style={{marginLeft: 4, padding: 4}}
                         >
-                        <IconButton style={{margin:0, padding: "8px 8px", borderRadius: 4}} alignItems="center" justifyContent="center" target="_blank" href={item.authorUrl || ""} aria-label={`info about ${item.title}`} className={classes.imageListIcon} >
+                        <IconButton className="photoCredsButton" style={{margin:0, padding: "8px 8px", borderRadius: 4}} alignItems="center" justifyContent="center" target="_blank" href={item.authorUrl || ""} aria-label={`info about ${item.title}`} >
                             <CameraAltIcon style={{margin:0}} className={classes.imageListIcon} />
                             <Typography style={{margin: "0px 8px"}} variant='body2' color="textSecondary">{"@" + item.author}</Typography>    
                         </IconButton>  
@@ -211,10 +226,8 @@ const SectionTitleText = ({id, children, variant, marginTop, marginBottom}) => {
 
 const MrKatVideosList = ({data, sectionTitleId, title}) => {
   const classes = GlobalStyles();
-  console.log(data);
   const theme = useTheme();
   const isSmallerSize = useMediaQuery(theme.breakpoints.down('sm'));
-  console.log("IS SMALLER SIZE: ", isSmallerSize);
   return (
       <Container my={8} classes={classes.backgroundRoot} maxWidth="lg">
         {/* End hero unit */}
@@ -272,7 +285,7 @@ const DemosButton = ({href, label, iconSrc, ...otherProps}) => {
 
   return (
     <Card className={`demoButton ${classes.lightCard}`} {...otherProps}>
-      <Link className="navBarLink" target="_blank" href={href}>
+      <Link className="navBarLink demoButton" target="_blank" href={href}>
         <Box  
           item
           container
@@ -295,10 +308,10 @@ const DemosSection = ({sectionTitleId}) => {
   const classes = GlobalStyles();
 
   return (
-    <Box 
-      my={8}  style={{margin: "20px 0px"}} classes={classes.backgroundRoot} maxWidth="lg"
+    <Container 
+      my={8}  style={{margin: "20px 0px", maxWidth: "100%"}} classes={classes.backgroundRoot} 
       cols={2}
-      s={1}
+      sm={1}
       
     >
       <SectionTitleText id={sectionTitleId} marginTop={20}>DEMOS</SectionTitleText>
@@ -308,8 +321,9 @@ const DemosSection = ({sectionTitleId}) => {
         justifyContent="center"
         alignItems="center"
         display="flex"
-        spacing={4}
-        md={12}
+        width="100%"
+        spacing={2}
+        sm={12}
       >
         <Grid item>
           <DemosButton label="DEMO LINK" iconSrc={require('../images/icons/google-drive.png')} href="https://drive.google.com/drive/folders/1pAB-OROGAbzrvcHXqlT7NMET4XGsrdHX?usp=sharing" />
@@ -320,7 +334,7 @@ const DemosSection = ({sectionTitleId}) => {
 
       </Grid>
       
-    </Box>
+    </Container>
   )
 }
 
@@ -336,8 +350,8 @@ export default function BandHomePage() {
         <MrKatCoverBioAndContact />
         <DemosSection sectionTitleId="demo-section"/>
         <MrKatVideosList sectionTitleId='vids-section' data={videoData} title="VIDS"/>
-        <MrKatImagesList sectionTitleId='poster-section' regularRowHeight={300} smallRowHeight={400} data={postersData} title="POSTERS" smallCols={1} cols={4}/>
-        <MrKatImagesList sectionTitleId='pics-section' regularRowHeight={200} smallRowHeight={400} data={bandPicsData} title="PICS" smallCols={2} cols={5}/>
+        <MrKatImagesList sectionTitleId='poster-section' regularRowHeight={300} smallRowHeight={200} data={postersData} title="POSTERS" smallCols={2} cols={4}/>
+        <MrKatImagesList sectionTitleId='pics-section' regularRowHeight={200} smallRowHeight={200} data={bandPicsData} title="PICS" smallCols={2} cols={5}/>
         <Footer />
       </Container>
         {/* Hero unit */}
