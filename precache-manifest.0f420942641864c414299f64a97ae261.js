@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "b78523f69a1ab979373f",
-    "url": "/static/css/main.806e45a7.chunk.css"
+    "revision": "d09799ce9c8fa67830f6",
+    "url": "/static/css/main.eb81f156.chunk.css"
   },
   {
-    "revision": "b78523f69a1ab979373f",
-    "url": "/static/js/main.a736b5d3.chunk.js"
+    "revision": "d09799ce9c8fa67830f6",
+    "url": "/static/js/main.33a47247.chunk.js"
   },
   {
     "revision": "42ac5946195a7306e2a5",
     "url": "/static/js/runtime~main.a8a9905a.js"
   },
   {
-    "revision": "0146183c5be41905658f",
+    "revision": "bdb7b0fd55f2da59afdd",
     "url": "/static/css/2.3c283201.chunk.css"
   },
   {
-    "revision": "0146183c5be41905658f",
-    "url": "/static/js/2.b683e16c.chunk.js"
+    "revision": "bdb7b0fd55f2da59afdd",
+    "url": "/static/js/2.eeb84714.chunk.js"
   },
   {
     "revision": "c653e77291403ed7d25f1385705e3b4c",
@@ -85,7 +85,7 @@ self.__precacheManifest = [
   },
   {
     "revision": "ad2b173a1dc3bdfeea36f7a198cf0450",
-    "url": "/static/media/2023-jan-1-mohawk-poster.ad2b173a.jpg"
+    "url": "/static/media/2023-jan-22-mohawk-poster.ad2b173a.jpg"
   },
   {
     "revision": "6298189b62e9d46bdda7398f25d53bd6",
@@ -192,7 +192,7 @@ self.__precacheManifest = [
     "url": "/static/media/google-drive.a2135c3d.png"
   },
   {
-    "revision": "e69e50d94873f38cfbbc6ac9cbc1dbe4",
+    "revision": "7cc592388a1648fc52ef4c9792ab055e",
     "url": "/index.html"
   }
 ];
