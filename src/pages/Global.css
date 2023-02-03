@@ -1,10 +1,16 @@
 a.navBarLink, .navBarLink {
-  color: inherit;
+  color: #fff;
 }
 
-a.navBarLink:hover .navBarLink:hover {
+a.navBarLink:hover, .navBarLink:hover {
   text-decoration: none;
-  color: #aaa;
+  color: #aaaa;
+}
+
+a.photoCredsButton:hover {
+  background-color: #222222ef;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .demoButton:hover {
@@ -12,11 +18,7 @@ a.navBarLink:hover .navBarLink:hover {
   text-decoration: none;
 }
 
-a.photoCredsButton:hover {
-  text-decoration: none;
-  color: 'white';
-}
-
-a:hover {
-  text-decoration: none;
+.photoCredsText:hover {
+  color: white;
+  font-weight: bold;
 }

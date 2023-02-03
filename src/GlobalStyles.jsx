@@ -20,6 +20,13 @@ globalTheme.typography.h6 = {
   // },
 }
 
+globalTheme.typography.body2 = {
+  fontSize: '1.2rem',
+  // [globalTheme.breakpoints.up('sm')]: {
+  //   fontSize: '2.0rem',
+  // },
+}
+
 
 
 const GlobalStyles = makeStyles((theme) => ({
@@ -60,7 +67,8 @@ const GlobalStyles = makeStyles((theme) => ({
     overflow: 'hidden',
     width: '100%',
     // padding: 20,
-    background: globalTheme.palette.background.main,
+    // background: globalTheme.palette.background.main,
+    background:'linear-gradient(177deg, #25212f  30%, #111 90%)',
     // opacity: 0.25
   },
   backgroundRoot: {
@@ -104,6 +112,13 @@ const GlobalStyles = makeStyles((theme) => ({
     backgroundColor: "#444f",
     width: 330,
   }, 
+  photoCredsButton: {
+    // backgroundColor: 'black',
+    background:'linear-gradient(177deg, #25212f22  30%, #1117 90%)',
+    // opacity: 0.5,
+    borderRadius: 4,
+    marginBottom: 20,
+  },
 }));
 
 export default GlobalStyles;

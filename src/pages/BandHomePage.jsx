@@ -35,18 +35,18 @@ import './Global.css'
 
 
 const author_oci = {
-  authorUrl: "https://www.instagram.com/isaacpit97/",
+  authorUrl: "https://www.instagram.com/o_ci/",
   author: "oci"
 }
 
 const author_jake = {
-  authorUrl: "https://www.instagram.com/isaacpit97/",
-  author: "jake"
+  authorUrl: "https://www.instagram.com/jakesnaake1/",
+  author: "jakesnaake1"
 }
 
-const author_isaac = {
-  authorUrl: "https://www.instagram.com/isaacpit97/",
-  author: "isaac"
+const author_mrkat = {
+  authorUrl: "https://www.instagram.com/mrkatband/",
+  author: "mrkatband"
 }
 
 const author_beth = {
@@ -55,8 +55,13 @@ const author_beth = {
 }
 
 const author_elianna = {
-  authorUrl: "https://www.instagram.com/isaacpit97/",
+  authorUrl: "https://www.instagram.com/eliannasart/",
   author: "eliannasart"
+}
+
+const author_emma = {
+  authorUrl: "https://www.instagram.com/isaacpit97/",
+  author: "emma"
 }
 
 const videoData = [
@@ -71,84 +76,83 @@ const videoData = [
 ];
 
 const postersData = [
-  { img: require('../images/posters/2023-jan-1-mohawk-poster.jpg'), title: 'isaac', ...author_beth, cols: 2, rows: 2 },
-  { img: require('../images/posters/2022-nye-poster.jpg'), title: 'isaac', ...author_elianna, cols: 2, rows: 2 },
-  { img: require('../images/posters/2023-jan-27-rio.jpg'), title: 'isaac', ...author_elianna, cols: 1, rows: 1 },
-  { img: require('../images/posters/2022-sept-30-poster.jpg'), title: 'isaac', ...author_elianna, cols: 1, rows: 1},
-  { img: require('../images/posters/2022-dec-9-poster.jpg'), title: 'isaac', ...author_elianna, author: 'author', cols: 1, rows: 1 },
-  { img: require('../images/posters/2023-jan-20-at-101.jpg'), title: 'isaac', ...author_beth, cols: 1, rows: 1 },
+  { img: require('../images/posters/2023-jan-22-mohawk-poster.jpg'), title: undefined, ...author_beth, cols: 2, rows: 2 },
+  { img: require('../images/posters/2022-nye-poster.jpg'), title: undefined, ...author_elianna, cols: 2, rows: 2 },
+  { img: require('../images/posters/2023-jan-27-rio.jpg'), title: undefined, ...author_elianna, cols: 1, rows: 1 },
+  { img: require('../images/posters/2022-sept-30-poster.jpg'), title: undefined, ...author_elianna, cols: 1, rows: 1},
+  { img: require('../images/posters/2022-dec-9-poster.jpg'), title: undefined, ...author_emma, cols: 1, rows: 1 },
+  { img: require('../images/posters/2023-jan-20-at-101.jpg'), title: undefined, ...author_beth, cols: 1, rows: 1 },
 ];
-
 
 const bandPicsData = [
   
-  { img: require('../images/mohawk/full-band-color.jpg'), title: 'mr kat', ...author_oci, cols: 2, rows: 2},
-  { img: require('../images/mohawk/full-band-side.jpg'), title: 'mr kat', ...author_oci, cols: 2, rows: 2 }, 
-  { img: require('../images/mohawk/kat-growl.jpg'), title: 'isaac', ...author_oci, cols: 1, rows: 2 }, 
+  { img: require('../images/mohawk/full-band-color.jpg'), title: undefined, ...author_oci, cols: 2, rows: 2},
+  { img: require('../images/mohawk/full-band-side.jpg'), title: undefined, ...author_oci, cols: 2, rows: 2 }, 
+  { img: require('../images/mohawk/kat-growl.jpg'), title: undefined, ...author_oci, cols: 1, rows: 2 }, 
 
-  { img: require('../images/101-show/jan-20-23/i-k-j.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 },   
-  { img: require('../images/101-show/dec-9-22/j-3.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/v-4.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1}, 
-  { img: require('../images/101-show/jan-20-23/i-1.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1}, 
-  { img: require('../images/101-show/jan-20-23/k-v.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  { img: require('../images/101-show/jan-20-23/i-k-j.jpg'), title: undefined, cols: 1, rows: 1 , ...author_jake},   
+  { img: require('../images/101-show/dec-9-22/j-3.jpg'), title: undefined, cols: 1, rows: 1, ...author_jake}, 
+  { img: require('../images/101-show/jan-20-23/v-4.jpg'), title: undefined, cols: 1, rows: 1, ...author_jake}, 
+  { img: require('../images/101-show/jan-20-23/i-1.jpg'), title: undefined, cols: 1, rows: 1, ...author_jake}, 
+  { img: require('../images/101-show/jan-20-23/k-v.jpg'), title: undefined, cols: 1, rows: 1, ...author_jake}, 
   
-  { img: require('../images/101-show/dec-9-22/k-v-j-1.jpg'), title: 'isaac', author: 'kat', cols: 2, rows: 2 }, 
-  { img: require('../images/101-show/jan-20-23/v-5.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 2 }, 
-  { img: require('../images/101-show/jan-20-23/j-3.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 2 }, 
-  { img: require('../images/101-show/dec-9-22/i-2.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 2 }, 
+  { img: require('../images/101-show/dec-9-22/k-v-j-1.jpg'), title: undefined, cols: 2, rows: 2, ...author_jake }, 
+  { img: require('../images/101-show/jan-20-23/v-5.jpg'), title: undefined, cols: 1, rows: 2, ...author_jake }, 
+  { img: require('../images/101-show/jan-20-23/j-3.jpg'), title: undefined, cols: 1, rows: 2, ...author_jake }, 
+  { img: require('../images/101-show/dec-9-22/i-2.jpg'), title: undefined, cols: 1, rows: 2, ...author_jake }, 
 
-  { img: require('../images/101-show/jan-20-23/i-k.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1},
-  { img: require('../images/101-show/jan-20-23/j.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/mr-kat-debut/mr-kat-at-101.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/band-pics/mr-kat-sticker.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  { img: require('../images/101-show/jan-20-23/k-11.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 },
+  { img: require('../images/101-show/jan-20-23/i-k.jpg'), title: undefined, cols: 1, rows: 1, ...author_jake},
+  { img: require('../images/101-show/jan-20-23/j.jpg'), title: undefined, cols: 1, rows: 1, ...author_jake }, 
+  { img: require('../images/mr-kat-debut/mr-kat-at-101.jpg'), title: undefined, cols: 1, rows: 1, ...author_jake }, 
+  { img: require('../images/band-pics/mr-kat-sticker.jpg'), title: undefined, cols: 1, rows: 1, ...author_mrkat }, 
+  { img: require('../images/101-show/jan-20-23/k-11.jpg'), title: undefined, cols: 1, rows: 1, ...author_jake},
   
-  { img: require('../images/101-show/jan-20-23/i-k-v.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 2 }, 
-  { img: require('../images/101-show/jan-20-23/j-4.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 2 }, 
-  { img: require('../images/101-show/dec-9-22/i-k-1.jpg'), title: 'isaac', author: 'kat', cols: 2, rows: 2}, 
-  { img: require('../images/101-show/jan-20-23/v.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 2 },   
+  { img: require('../images/101-show/jan-20-23/i-k-v.jpg'), title: undefined, cols: 1, rows: 2, ...author_jake}, 
+  { img: require('../images/101-show/jan-20-23/j-4.jpg'), title: undefined, cols: 1, rows: 2, ...author_jake}, 
+  { img: require('../images/101-show/dec-9-22/i-k-1.jpg'), title: undefined, cols: 2, rows: 2, ...author_jake}, 
+  { img: require('../images/101-show/jan-20-23/v.jpg'), title: undefined, cols: 1, rows: 2, ...author_jake },   
 
-  // { img: require('../images/101-show/dec-9-22/i-1.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/101-show/jan-20-23/k-12.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/nye/nye-house-show.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/101-show/dec-9-22/v-2.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 },
-  // { img: require('../images/101-show/dec-9-22/k-1.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/101-show/dec-9-22/j-1.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/101-show/jan-20-23/k.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/101-show/jan-20-23/v-3.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/101-show/dec-9-22/i-k-v-1.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/101-show/dec-9-22/i-k-2.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/101-show/dec-9-22/i-k-3.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/101-show/jan-20-23/j-2.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/101-show/dec-9-22/j-k-1.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/101-show/dec-9-22/v-k-1.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/101-show/jan-20-23/i-2.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/101-show/jan-20-23/i-k-2.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/101-show/jan-20-23/j-5.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/101-show/jan-20-23/j-6.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/101-show/jan-20-23/j-8.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/101-show/jan-20-23/j-9.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/101-show/jan-20-23/k-2.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/101-show/jan-20-23/k-3.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/101-show/jan-20-23/k-4.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/101-show/jan-20-23/k-10.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/101-show/jan-20-23/k-n.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/101-show/jan-20-23/k-v-j.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/101-show/dec-9-22/j-2.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/nye/nye-show.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/101-show/jan-20-23/k-v-2.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/mr-kat-debut/sydney-climbing.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/nye/nye-house-show-group.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/nye/nye-house-show-setup.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/101-show/jan-20-23/k-5.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/101-show/jan-20-23/k-6.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/101-show/jan-20-23/k-7.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/101-show/jan-20-23/k-8.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/101-show/jan-20-23/k-9.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/101-show/dec-9-22/i-3.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/band-pics/isaac.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
-  // { img: require('../images/band-pics/band-pic.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 },  
-  // { img: require('../images/nye/nye-pic.jpg'), title: 'isaac', author: 'kat', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/dec-9-22/i-1.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/k-12.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/nye/nye-house-show.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/dec-9-22/v-2.jpg'), title: 'isaac', cols: 1, rows: 1 },
+  // { img: require('../images/101-show/dec-9-22/k-1.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/dec-9-22/j-1.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/k.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/v-3.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/dec-9-22/i-k-v-1.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/dec-9-22/i-k-2.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/dec-9-22/i-k-3.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/j-2.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/dec-9-22/j-k-1.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/dec-9-22/v-k-1.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/i-2.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/i-k-2.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/j-5.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/j-6.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/j-8.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/j-9.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/k-2.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/k-3.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/k-4.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/k-10.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/k-n.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/k-v-j.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/dec-9-22/j-2.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/nye/nye-show.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/k-v-2.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/mr-kat-debut/sydney-climbing.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/nye/nye-house-show-group.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/nye/nye-house-show-setup.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/k-5.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/k-6.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/k-7.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/k-8.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/jan-20-23/k-9.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/101-show/dec-9-22/i-3.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/band-pics/isaac.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
+  // { img: require('../images/band-pics/band-pic.jpg'), title: 'isaac', cols: 1, rows: 1 },  
+  // { img: require('../images/nye/nye-pic.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
 ]
 
 const MrKatImagesList = ({data, title, regularRowHeight, smallRowHeight, subTitle, sectionTitleId, smallCols, cols}) => {
@@ -190,10 +194,11 @@ const MrKatImagesList = ({data, title, regularRowHeight, smallRowHeight, subTitl
                         alignItems="center"
                         // spacing={4}
                         style={{marginLeft: 4, padding: 4}}
+                        className={classes.photoCredsButton}
                         >
                         <IconButton className="photoCredsButton" style={{margin:0, padding: "8px 8px", borderRadius: 4}} alignItems="center" justifyContent="center" target="_blank" href={item.authorUrl || ""} aria-label={`info about ${item.title}`} >
                             <CameraAltIcon style={{margin:0}} className={classes.imageListIcon} />
-                            <Typography style={{margin: "0px 8px"}} variant='body2' color="textSecondary">{"@" + item.author}</Typography>    
+                            <Typography className="photoCredsText" style={{margin: "0px 8px"}} variant='body2' color='textSecondary' >{"@" + item.author}</Typography>    
                         </IconButton>  
                         
                       </Box>
@@ -239,7 +244,7 @@ const MrKatVideosList = ({data, sectionTitleId, title}) => {
               
                 <video controls src={card.src} loading='lazy' type="video/mp4"/>
                 <CardContent className={classes.cardContent} >
-                  <Typography variant='caption' color='textSecondary'  sx={{p:0}}>
+                  <Typography variant='body' color='textSecondary'  sx={{p:0}}>
                     {card.title}
                   </Typography>
                 </CardContent>
