@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Container, Grid, Typography, Box, Card, Paper, useTheme, useMediaQuery} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
-import { Link } from 'react-router-dom';
 
 
 import MrKatLogo from './MrKatLogo';
@@ -54,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
 
 export const ContactCard = ({href, src, alt, children, ...other}) => {
   return (
-      <Link className="navBarLink" href={href} target="_blank">
+      <a className="navBarLink" href={href} target="_blank">
         {/* <div className="col d-flex flex-row justify-content-center " style={{maxHeight: "inherit"}}> */}
           <Box 
             display="flex"
@@ -72,7 +71,7 @@ export const ContactCard = ({href, src, alt, children, ...other}) => {
           </Box>
           
         {/* </div> */}
-      </Link>
+      </a>
     
   );
 }

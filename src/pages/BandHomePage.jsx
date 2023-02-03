@@ -279,7 +279,7 @@ const Footer = () => {
         </ContactCard>
         
       </Grid>
-      <Typography variant="h6" align="center" className="navBarLink" style={{marginTop: 20, color: "#888c"}}>Icons by <Link className="navBarLink" target="_blank" href="https://icons8.com">Icons8</Link></Typography>
+      <Typography variant="h6" align="center" className="navBarLink" style={{marginTop: 20, color: "#888c"}}>Icons by <a className="navBarLink" target="_blank" href="https://icons8.com">Icons8</a></Typography>
       
     </Container>
   )
@@ -290,7 +290,7 @@ const DemosButton = ({href, label, iconSrc, ...otherProps}) => {
 
   return (
     <Card className={`demoButton ${classes.lightCard}`} {...otherProps}>
-      <Link className="navBarLink demoButton" target="_blank" href={href}>
+      <a className="navBarLink demoButton" target="_blank" href={href}>
         <Box  
           item
           container
@@ -303,7 +303,7 @@ const DemosButton = ({href, label, iconSrc, ...otherProps}) => {
             <SectionTitleText variant="h5" marginTop={10} marginBottom={10}>{label}</SectionTitleText>  
             <img style={{marginLeft: 20}} height={80} width={80} src={iconSrc}/>
           </Box>
-      </Link>
+      </a>
     </Card>
   )
 
