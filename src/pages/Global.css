@@ -8,9 +8,15 @@ a.navBarLink:hover, .navBarLink:hover {
 }
 
 a.photoCredsButton:hover {
-  background-color: #222222ef;
+  background-color: #3335;
   text-decoration: none;
   font-weight: bold;
+}
+
+a.photoCredsButton:hover .photoCredsText {
+  color: white;
+  font-weight: bolder;
+  font-size: 103%;
 }
 
 .demoButton:hover {
@@ -18,7 +24,3 @@ a.photoCredsButton:hover {
   text-decoration: none;
 }
 
-.photoCredsText:hover {
-  color: white;
-  font-weight: bold;
-}

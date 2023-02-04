@@ -197,7 +197,7 @@ const MrKatImagesList = ({data, title, regularRowHeight, smallRowHeight, subTitl
                         className={classes.photoCredsButton}
                         >
                         <IconButton className="photoCredsButton" style={{margin:0, padding: "8px 8px", borderRadius: 4}} alignItems="center" justifyContent="center" target="_blank" href={item.artistUrl || ""} aria-label={`info about ${item.title}`} >
-                            <CameraAltIcon style={{margin:0}} className={classes.imageListIcon} />
+                            {/* <CameraAltIcon style={{margin:0}} className={classes.imageListIcon} /> */}
                             <Typography className="photoCredsText" style={{margin: "0px 8px"}} variant='body2' color='textSecondary' >{"@" + item.artist}</Typography>    
                         </IconButton>  
                         
