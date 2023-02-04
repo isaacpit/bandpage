@@ -34,34 +34,34 @@ import GlobalStyles, {globalTheme} from '../GlobalStyles';
 import './Global.css'
 
 
-const author_oci = {
-  authorUrl: "https://www.instagram.com/o_ci/",
-  author: "oci"
+const artist_oci = {
+  artistUrl: "https://www.instagram.com/o_ci/",
+  artist: "oci"
 }
 
-const author_jake = {
-  authorUrl: "https://www.instagram.com/jakesnaake1/",
-  author: "jakesnaake1"
+const artist_jake = {
+  artistUrl: "https://www.instagram.com/jakesnaake1/",
+  artist: "jakesnaake1"
 }
 
-const author_mrkat = {
-  authorUrl: "https://www.instagram.com/mrkatband/",
-  author: "mrkatband"
+const artist_mrkat = {
+  artistUrl: "https://www.instagram.com/mrkatband/",
+  artist: "mrkatband"
 }
 
-const author_beth = {
-  authorUrl: "https://www.instagram.com/junkdrawerbybeth/",
-  author: "junkdrawerbybeth"
+const artist_beth = {
+  artistUrl: "https://www.instagram.com/junkdrawerbybeth/",
+  artist: "junkdrawerbybeth"
 }
 
-const author_elianna = {
-  authorUrl: "https://www.instagram.com/eliannasart/",
-  author: "eliannasart"
+const artist_elianna = {
+  artistUrl: "https://www.instagram.com/eliannasart/",
+  artist: "eliannasart"
 }
 
-const author_emma = {
-  authorUrl: "https://www.instagram.com/emmalainejones/",
-  author: "emmalainejones"
+const artist_emma = {
+  artistUrl: "https://www.instagram.com/emmalainejones/",
+  artist: "emmalainejones"
 }
 
 const videoData = [
@@ -76,41 +76,41 @@ const videoData = [
 ];
 
 const postersData = [
-  { img: require('../images/posters/2023-jan-22-mohawk-poster.jpg'), title: undefined, ...author_beth, cols: 2, rows: 2 },
-  { img: require('../images/posters/2022-nye-poster.jpg'), title: undefined, ...author_elianna, cols: 2, rows: 2 },
-  { img: require('../images/posters/2023-jan-27-rio.jpg'), title: undefined, ...author_elianna, cols: 1, rows: 1 },
-  { img: require('../images/posters/2022-sept-30-poster.jpg'), title: undefined, ...author_elianna, cols: 1, rows: 1},
-  { img: require('../images/posters/2022-dec-9-poster.jpg'), title: undefined, ...author_emma, cols: 1, rows: 1 },
-  { img: require('../images/posters/2023-jan-20-at-101.jpg'), title: undefined, ...author_beth, cols: 1, rows: 1 },
+  { img: require('../images/posters/2023-jan-22-mohawk-poster.jpg'), title: undefined, ...artist_beth, cols: 2, rows: 2 },
+  { img: require('../images/posters/2022-nye-poster.jpg'), title: undefined, ...artist_elianna, cols: 2, rows: 2 },
+  { img: require('../images/posters/2023-jan-27-rio.jpg'), title: undefined, ...artist_elianna, cols: 1, rows: 1 },
+  { img: require('../images/posters/2022-sept-30-poster.jpg'), title: undefined, ...artist_elianna, cols: 1, rows: 1},
+  { img: require('../images/posters/2022-dec-9-poster.jpg'), title: undefined, ...artist_emma, cols: 1, rows: 1 },
+  { img: require('../images/posters/2023-jan-20-at-101.jpg'), title: undefined, ...artist_beth, cols: 1, rows: 1 },
 ];
 
 const bandPicsData = [
   
-  { img: require('../images/mohawk/full-band-color.jpg'), title: undefined, ...author_oci, cols: 2, rows: 2},
-  { img: require('../images/mohawk/full-band-side.jpg'), title: undefined, ...author_oci, cols: 2, rows: 2 }, 
-  { img: require('../images/mohawk/kat-growl.jpg'), title: undefined, ...author_oci, cols: 1, rows: 2 }, 
+  { img: require('../images/mohawk/full-band-color.jpg'), title: undefined, ...artist_oci, cols: 2, rows: 2},
+  { img: require('../images/mohawk/full-band-side.jpg'), title: undefined, ...artist_oci, cols: 2, rows: 2 }, 
+  { img: require('../images/mohawk/kat-growl.jpg'), title: undefined, ...artist_oci, cols: 1, rows: 2 }, 
 
-  { img: require('../images/101-show/jan-20-23/i-k-j.jpg'), title: undefined, cols: 1, rows: 1 , ...author_jake},   
-  { img: require('../images/101-show/dec-9-22/j-3.jpg'), title: undefined, cols: 1, rows: 1, ...author_jake}, 
-  { img: require('../images/101-show/jan-20-23/v-4.jpg'), title: undefined, cols: 1, rows: 1, ...author_jake}, 
-  { img: require('../images/101-show/jan-20-23/i-1.jpg'), title: undefined, cols: 1, rows: 1, ...author_jake}, 
-  { img: require('../images/101-show/jan-20-23/k-v.jpg'), title: undefined, cols: 1, rows: 1, ...author_jake}, 
+  { img: require('../images/101-show/jan-20-23/i-k-j.jpg'), title: undefined, cols: 1, rows: 1 , ...artist_jake},   
+  { img: require('../images/101-show/dec-9-22/j-3.jpg'), title: undefined, cols: 1, rows: 1, ...artist_jake}, 
+  { img: require('../images/101-show/jan-20-23/v-4.jpg'), title: undefined, cols: 1, rows: 1, ...artist_jake}, 
+  { img: require('../images/101-show/jan-20-23/i-1.jpg'), title: undefined, cols: 1, rows: 1, ...artist_jake}, 
+  { img: require('../images/101-show/jan-20-23/k-v.jpg'), title: undefined, cols: 1, rows: 1, ...artist_jake}, 
   
-  { img: require('../images/101-show/dec-9-22/k-v-j-1.jpg'), title: undefined, cols: 2, rows: 2, ...author_jake }, 
-  { img: require('../images/101-show/jan-20-23/v-5.jpg'), title: undefined, cols: 1, rows: 2, ...author_jake }, 
-  { img: require('../images/101-show/jan-20-23/j-3.jpg'), title: undefined, cols: 1, rows: 2, ...author_jake }, 
-  { img: require('../images/101-show/dec-9-22/i-2.jpg'), title: undefined, cols: 1, rows: 2, ...author_jake }, 
+  { img: require('../images/101-show/dec-9-22/k-v-j-1.jpg'), title: undefined, cols: 2, rows: 2, ...artist_jake }, 
+  { img: require('../images/101-show/jan-20-23/v-5.jpg'), title: undefined, cols: 1, rows: 2, ...artist_jake }, 
+  { img: require('../images/101-show/jan-20-23/j-3.jpg'), title: undefined, cols: 1, rows: 2, ...artist_jake }, 
+  { img: require('../images/101-show/dec-9-22/i-2.jpg'), title: undefined, cols: 1, rows: 2, ...artist_jake }, 
 
-  { img: require('../images/101-show/jan-20-23/i-k.jpg'), title: undefined, cols: 1, rows: 1, ...author_jake},
-  { img: require('../images/101-show/jan-20-23/j.jpg'), title: undefined, cols: 1, rows: 1, ...author_jake }, 
-  { img: require('../images/mr-kat-debut/mr-kat-at-101.jpg'), title: undefined, cols: 1, rows: 1, ...author_mrkat }, 
-  { img: require('../images/band-pics/mr-kat-sticker.jpg'), title: undefined, cols: 1, rows: 1, ...author_mrkat }, 
-  { img: require('../images/101-show/jan-20-23/k-11.jpg'), title: undefined, cols: 1, rows: 1, ...author_jake},
+  { img: require('../images/101-show/jan-20-23/i-k.jpg'), title: undefined, cols: 1, rows: 1, ...artist_jake},
+  { img: require('../images/101-show/jan-20-23/j.jpg'), title: undefined, cols: 1, rows: 1, ...artist_jake }, 
+  { img: require('../images/mr-kat-debut/mr-kat-at-101.jpg'), title: undefined, cols: 1, rows: 1, ...artist_mrkat }, 
+  { img: require('../images/band-pics/mr-kat-sticker.jpg'), title: undefined, cols: 1, rows: 1, ...artist_mrkat }, 
+  { img: require('../images/101-show/jan-20-23/k-11.jpg'), title: undefined, cols: 1, rows: 1, ...artist_jake},
   
-  { img: require('../images/101-show/jan-20-23/i-k-v.jpg'), title: undefined, cols: 1, rows: 2, ...author_jake}, 
-  { img: require('../images/101-show/jan-20-23/j-4.jpg'), title: undefined, cols: 1, rows: 2, ...author_jake}, 
-  { img: require('../images/101-show/dec-9-22/i-k-1.jpg'), title: undefined, cols: 2, rows: 2, ...author_jake}, 
-  { img: require('../images/101-show/jan-20-23/v.jpg'), title: undefined, cols: 1, rows: 2, ...author_jake },   
+  { img: require('../images/101-show/jan-20-23/i-k-v.jpg'), title: undefined, cols: 1, rows: 2, ...artist_jake}, 
+  { img: require('../images/101-show/jan-20-23/j-4.jpg'), title: undefined, cols: 1, rows: 2, ...artist_jake}, 
+  { img: require('../images/101-show/dec-9-22/i-k-1.jpg'), title: undefined, cols: 2, rows: 2, ...artist_jake}, 
+  { img: require('../images/101-show/jan-20-23/v.jpg'), title: undefined, cols: 1, rows: 2, ...artist_jake },   
 
   // { img: require('../images/101-show/dec-9-22/i-1.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
   // { img: require('../images/101-show/jan-20-23/k-12.jpg'), title: 'isaac', cols: 1, rows: 1 }, 
@@ -196,9 +196,9 @@ const MrKatImagesList = ({data, title, regularRowHeight, smallRowHeight, subTitl
                         style={{marginLeft: 4, padding: 4}}
                         className={classes.photoCredsButton}
                         >
-                        <IconButton className="photoCredsButton" style={{margin:0, padding: "8px 8px", borderRadius: 4}} alignItems="center" justifyContent="center" target="_blank" href={item.authorUrl || ""} aria-label={`info about ${item.title}`} >
+                        <IconButton className="photoCredsButton" style={{margin:0, padding: "8px 8px", borderRadius: 4}} alignItems="center" justifyContent="center" target="_blank" href={item.artistUrl || ""} aria-label={`info about ${item.title}`} >
                             <CameraAltIcon style={{margin:0}} className={classes.imageListIcon} />
-                            <Typography className="photoCredsText" style={{margin: "0px 8px"}} variant='body2' color='textSecondary' >{"@" + item.author}</Typography>    
+                            <Typography className="photoCredsText" style={{margin: "0px 8px"}} variant='body2' color='textSecondary' >{"@" + item.artist}</Typography>    
                         </IconButton>  
                         
                       </Box>
