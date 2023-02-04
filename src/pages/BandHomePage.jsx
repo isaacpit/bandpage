@@ -60,8 +60,8 @@ const author_elianna = {
 }
 
 const author_emma = {
-  authorUrl: "https://www.instagram.com/isaacpit97/",
-  author: "emma"
+  authorUrl: "https://www.instagram.com/emmalainejones/",
+  author: "emmalainejones"
 }
 
 const videoData = [
